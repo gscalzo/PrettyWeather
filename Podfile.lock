@@ -1,0 +1,10 @@
+PODS:
+  - PWParallaxScrollView (1.1.5)
+
+DEPENDENCIES:
+  - PWParallaxScrollView (~> 1.1.5)
+
+SPEC CHECKSUMS:
+  PWParallaxScrollView: bf7b67a37a4afc52ff22c2e627a1438a388beba3
+
+COCOAPODS: 0.36.0.beta.1
