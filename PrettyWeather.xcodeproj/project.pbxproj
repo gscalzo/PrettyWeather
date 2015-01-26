@@ -18,6 +18,8 @@
 		EE0D97B01A75AADA009D8A2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97AF1A75AADA009D8A2A /* LaunchScreen.xib */; };
 		EE0D97B41A75B1EA009D8A2A /* WeatherResumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97B31A75B1EA009D8A2A /* WeatherResumeView.swift */; };
 		EE0D97B61A75B78B009D8A2A /* WeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97B51A75B78B009D8A2A /* WeatherForecastView.swift */; };
+		EE0D97B91A75C07D009D8A2A /* WeatherDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97B81A75C07D009D8A2A /* WeatherDatastore.swift */; };
+		EE0D97BC1A75C12B009D8A2A /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97BB1A75C12B009D8A2A /* WeatherCondition.swift */; };
 		EE83EB8B1A75A0F9008A6745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */; };
 		EE83EB8D1A75A0F9008A6745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EB8C1A75A0F9008A6745 /* ViewController.swift */; };
 		EE83EB921A75A0F9008A6745 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE83EB911A75A0F9008A6745 /* Images.xcassets */; };
@@ -48,6 +50,8 @@
 		EE0D97AF1A75AADA009D8A2A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EE0D97B31A75B1EA009D8A2A /* WeatherResumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResumeView.swift; sourceTree = "<group>"; };
 		EE0D97B51A75B78B009D8A2A /* WeatherForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecastView.swift; sourceTree = "<group>"; };
+		EE0D97B81A75C07D009D8A2A /* WeatherDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDatastore.swift; sourceTree = "<group>"; };
+		EE0D97BB1A75C12B009D8A2A /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 		EE83EB851A75A0F9008A6745 /* PrettyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE83EB891A75A0F9008A6745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,22 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		EE0D97B71A75C066009D8A2A /* Datastores */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D97B81A75C07D009D8A2A /* WeatherDatastore.swift */,
+			);
+			name = Datastores;
+			sourceTree = "<group>";
+		};
+		EE0D97BA1A75C0A3009D8A2A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D97BB1A75C12B009D8A2A /* WeatherCondition.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		EE83EB7C1A75A0F9008A6745 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +150,8 @@
 		EE83EB871A75A0F9008A6745 /* PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D97BA1A75C0A3009D8A2A /* Entities */,
+				EE0D97B71A75C066009D8A2A /* Datastores */,
 				EEE92C8F1A75A6E200860DFD /* ViewControllers */,
 				EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */,
 				EE83EB8C1A75A0F9008A6745 /* ViewController.swift */,
@@ -334,9 +356,11 @@
 			files = (
 				EE83EB8D1A75A0F9008A6745 /* ViewController.swift in Sources */,
 				EE83EB8B1A75A0F9008A6745 /* AppDelegate.swift in Sources */,
+				EE0D97B91A75C07D009D8A2A /* WeatherDatastore.swift in Sources */,
 				EE0D97B41A75B1EA009D8A2A /* WeatherResumeView.swift in Sources */,
 				EE0D97A21A75A8C7009D8A2A /* PrettyWeatherViewController.swift in Sources */,
 				EE0D97B61A75B78B009D8A2A /* WeatherForecastView.swift in Sources */,
+				EE0D97BC1A75C12B009D8A2A /* WeatherCondition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

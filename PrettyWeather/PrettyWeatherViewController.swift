@@ -11,7 +11,6 @@ import Cartography
 
 class PrettyWeatherViewController: UIViewController {
     private let scrollView = UIScrollView()
-    private let contentView = UIView()
     private let resumeView = WeatherResumeView(frame: CGRectZero)
     private let forecastView = WeatherForecastView(frame: CGRectZero)
 
@@ -20,6 +19,10 @@ class PrettyWeatherViewController: UIViewController {
         setup()
         layoutView()
         style()
+        WeatherDatastore().updateForecast(51.5072, longitude: 0.1275) {
+            weatherConditions in
+            println(weatherConditions)
+        }
     }
 }
 
@@ -29,29 +32,21 @@ private extension PrettyWeatherViewController{
     func setup(){
         view.backgroundColor = UIColor.grayColor()
         view.addSubview(scrollView)
-        scrollView.addSubview(contentView)
-        contentView.addSubview(resumeView)
-        contentView.addSubview(forecastView)
+        scrollView.addSubview(resumeView)
+        scrollView.addSubview(forecastView)
     }
 }
 
 // MARK: Layout
-private extension PrettyWeatherViewController{
-    func layoutView(){
+extension PrettyWeatherViewController{
+    func layoutView() {
         layout(scrollView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
-        
-        layout(contentView) { view in
-            view.top == view.superview!.top
-            view.bottom == view.superview!.bottom
-            view.left == view.superview!.left
-            view.right == view.superview!.right
-        }
-        
+
         layout(resumeView) { view in
             view.left == view.superview!.left + 20
             return
@@ -59,11 +54,10 @@ private extension PrettyWeatherViewController{
         
         layout(forecastView, resumeView) { view, view2 in
             view.top == view2.bottom + 20
-            view.left == view.superview!.left + 20
-            view.right == view.superview!.right - 20
             view.bottom == view.superview!.bottom - 20
+            view.centerX == view.superview!.centerX
         }
-        
+
         let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
         layout(resumeView) { view in
             view.top == view.superview!.top + resumeToInsect
@@ -75,6 +69,7 @@ private extension PrettyWeatherViewController{
 // MARK: Style
 private extension PrettyWeatherViewController{
     func style(){
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.grayColor()
+        forecastView.backgroundColor = UIColor.redColor()
     }
 }

@@ -10,10 +10,11 @@ import UIKit
 import Cartography
 
 class WeatherResumeView: UIView {
+    private var didSetupConstraints = false
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        layoutView()
+//        layoutView()
         style()
     }
 
@@ -21,10 +22,19 @@ class WeatherResumeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func intrinsicContentSize() -> CGSize {
-        return CGSize(width: 120, height: 130)
-    }
+    override func updateConstraints() {
+        if didSetupConstraints == false {
+            super.updateConstraints()
+        }
 
+        layout(self) { view in
+            view.width == 120
+            view.height == 130
+            return
+        }
+        super.updateConstraints()
+        didSetupConstraints = true
+    }
 }
 
 
@@ -37,10 +47,11 @@ private extension WeatherResumeView{
 // MARK: Layout
 private extension WeatherResumeView{
     func layoutView(){
-//        layout(self) { view in
+        layout(self) { view in
 //            view.width == 120
 //            view.height == 130
-//        }
+            return
+        }
     }
 }
 

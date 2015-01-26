@@ -10,11 +10,11 @@ import Foundation
 import Cartography
 
 class WeatherForecastView: UIView {
-    private let contentView = UIView()
+    private var didSetupConstraints = false
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        layoutView()
         style()
     }
     
@@ -22,31 +22,29 @@ class WeatherForecastView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func intrinsicContentSize() -> CGSize {
-//        return CGSize(width: 320, height: 400)
-//    }
-//    
 }
 
 
 // MARK: Setup
 private extension WeatherForecastView{
     func setup(){
-        addSubview(contentView)
     }
 }
 
 // MARK: Layout
-private extension WeatherForecastView{
-    func layoutView(){
-                layout(contentView) { view in
-//                    view.width == 120
-                    view.left == view.superview!.left + 10
-                    view.top == view.superview!.top + 10
-                    view.bottom == view.superview!.bottom + 10
-                    view.height == 500
-                    view.width == 200
-                }
+extension WeatherForecastView{
+    
+    override func updateConstraints() {
+        if didSetupConstraints == false {
+            super.updateConstraints()
+        }
+        layout(self) { view in
+            view.width == view.superview!.width - 40
+            view.height == 500
+            return
+        }
+        super.updateConstraints()
+        didSetupConstraints = true
     }
 }
 
@@ -54,6 +52,7 @@ private extension WeatherForecastView{
 private extension WeatherForecastView{
     func style(){
         backgroundColor = UIColor.blueColor()
-        contentView.backgroundColor = UIColor.redColor()
+        
+    backgroundColor = UIColor.redColor()
     }
 }

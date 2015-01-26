@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainWindow.makeKeyAndVisible()
         window = mainWindow
         
+        NSUserDefaults.standardUserDefaults().setBool(true,
+            forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
         return true
     }
 

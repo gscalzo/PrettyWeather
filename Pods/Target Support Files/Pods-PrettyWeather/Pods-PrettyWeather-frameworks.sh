@@ -45,10 +45,14 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Alamofire.framework'
   install_framework 'Cartography.framework'
   install_framework 'PWParallaxScrollView.framework'
+  install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Alamofire.framework'
   install_framework 'Cartography.framework'
   install_framework 'PWParallaxScrollView.framework'
+  install_framework 'SwiftyJSON.framework'
 fi

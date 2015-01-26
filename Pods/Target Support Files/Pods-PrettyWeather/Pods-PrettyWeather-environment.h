@@ -6,6 +6,12 @@
 // project.
 
 
+// Alamofire
+#define COCOAPODS_POD_AVAILABLE_Alamofire
+#define COCOAPODS_VERSION_MAJOR_Alamofire 1
+#define COCOAPODS_VERSION_MINOR_Alamofire 1
+#define COCOAPODS_VERSION_PATCH_Alamofire 3
+
 // Cartography
 #define COCOAPODS_POD_AVAILABLE_Cartography
 #define COCOAPODS_VERSION_MAJOR_Cartography 0
@@ -17,4 +23,10 @@
 #define COCOAPODS_VERSION_MAJOR_PWParallaxScrollView 1
 #define COCOAPODS_VERSION_MINOR_PWParallaxScrollView 1
 #define COCOAPODS_VERSION_PATCH_PWParallaxScrollView 5
+
+// SwiftyJSON
+#define COCOAPODS_POD_AVAILABLE_SwiftyJSON
+#define COCOAPODS_VERSION_MAJOR_SwiftyJSON 2
+#define COCOAPODS_VERSION_MINOR_SwiftyJSON 1
+#define COCOAPODS_VERSION_PATCH_SwiftyJSON 3
 

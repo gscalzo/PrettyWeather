@@ -4,6 +4,9 @@
 target 'PrettyWeather' do
 	pod 'PWParallaxScrollView', '~> 1.1.5'
 	pod 'Cartography', '~> 0.1'
+	pod 'Alamofire', '~> 1.1.3'
+	pod 'SwiftyJSON', '~> 2.1.3'
+#	pod 'Reveal-iOS-SDK', '~> 1.0.7'
 end
 
 target 'PrettyWeatherTests' do
