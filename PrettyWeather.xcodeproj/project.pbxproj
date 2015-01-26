@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7FC96229CD0EEDB02F85E469 /* libPods-PrettyWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 894F1FE6770D71579C942AC3 /* libPods-PrettyWeather.a */; };
+		AC9D51E1AF3BBC55DE5D3B0C /* Pods_PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593BBA8CA7641638EF550D51 /* Pods_PrettyWeather.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE0D979B1A75A869009D8A2A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97951A75A869009D8A2A /* 1.jpg */; };
+		EE0D979C1A75A869009D8A2A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97961A75A869009D8A2A /* 2.jpg */; };
+		EE0D979D1A75A869009D8A2A /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97971A75A869009D8A2A /* 3.jpg */; };
+		EE0D979E1A75A869009D8A2A /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97981A75A869009D8A2A /* 4.jpg */; };
+		EE0D979F1A75A869009D8A2A /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97991A75A869009D8A2A /* 5.jpg */; };
+		EE0D97A01A75A869009D8A2A /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D979A1A75A869009D8A2A /* 6.jpg */; };
+		EE0D97A21A75A8C7009D8A2A /* PrettyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97A11A75A8C7009D8A2A /* PrettyWeatherViewController.swift */; };
+		EE0D97B01A75AADA009D8A2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97AF1A75AADA009D8A2A /* LaunchScreen.xib */; };
+		EE0D97B41A75B1EA009D8A2A /* WeatherResumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97B31A75B1EA009D8A2A /* WeatherResumeView.swift */; };
+		EE0D97B61A75B78B009D8A2A /* WeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D97B51A75B78B009D8A2A /* WeatherForecastView.swift */; };
 		EE83EB8B1A75A0F9008A6745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */; };
 		EE83EB8D1A75A0F9008A6745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EB8C1A75A0F9008A6745 /* ViewController.swift */; };
-		EE83EB901A75A0F9008A6745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE83EB8E1A75A0F9008A6745 /* Main.storyboard */; };
 		EE83EB921A75A0F9008A6745 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE83EB911A75A0F9008A6745 /* Images.xcassets */; };
-		EE83EB951A75A0F9008A6745 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83EB931A75A0F9008A6745 /* LaunchScreen.xib */; };
 		EE83EBA11A75A0F9008A6745 /* PrettyWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EBA01A75A0F9008A6745 /* PrettyWeatherTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,15 +36,23 @@
 
 /* Begin PBXFileReference section */
 		1172AA04AE84755B17DBEF3F /* Pods-PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
-		894F1FE6770D71579C942AC3 /* libPods-PrettyWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrettyWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		593BBA8CA7641638EF550D51 /* Pods_PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54F60D0D30AA64299F1D06C /* Pods-PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
+		EE0D97951A75A869009D8A2A /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		EE0D97961A75A869009D8A2A /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		EE0D97971A75A869009D8A2A /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		EE0D97981A75A869009D8A2A /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		EE0D97991A75A869009D8A2A /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		EE0D979A1A75A869009D8A2A /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		EE0D97A11A75A8C7009D8A2A /* PrettyWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyWeatherViewController.swift; sourceTree = "<group>"; };
+		EE0D97AF1A75AADA009D8A2A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		EE0D97B31A75B1EA009D8A2A /* WeatherResumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResumeView.swift; sourceTree = "<group>"; };
+		EE0D97B51A75B78B009D8A2A /* WeatherForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecastView.swift; sourceTree = "<group>"; };
 		EE83EB851A75A0F9008A6745 /* PrettyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE83EB891A75A0F9008A6745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE83EB8C1A75A0F9008A6745 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE83EB8F1A75A0F9008A6745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE83EB911A75A0F9008A6745 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EE83EB941A75A0F9008A6745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EE83EB9A1A75A0F9008A6745 /* PrettyWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE83EB9F1A75A0F9008A6745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE83EBA01A75A0F9008A6745 /* PrettyWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyWeatherTests.swift; sourceTree = "<group>"; };
@@ -47,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC96229CD0EEDB02F85E469 /* libPods-PrettyWeather.a in Frameworks */,
+				AC9D51E1AF3BBC55DE5D3B0C /* Pods_PrettyWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +89,22 @@
 		56CBA7C5C36485BFC623F2B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				894F1FE6770D71579C942AC3 /* libPods-PrettyWeather.a */,
+				593BBA8CA7641638EF550D51 /* Pods_PrettyWeather.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE0D97941A75A869009D8A2A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D97951A75A869009D8A2A /* 1.jpg */,
+				EE0D97961A75A869009D8A2A /* 2.jpg */,
+				EE0D97971A75A869009D8A2A /* 3.jpg */,
+				EE0D97981A75A869009D8A2A /* 4.jpg */,
+				EE0D97991A75A869009D8A2A /* 5.jpg */,
+				EE0D979A1A75A869009D8A2A /* 6.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		EE83EB7C1A75A0F9008A6745 = {
@@ -101,11 +130,10 @@
 		EE83EB871A75A0F9008A6745 /* PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				EEE92C8F1A75A6E200860DFD /* ViewControllers */,
 				EE83EB8A1A75A0F9008A6745 /* AppDelegate.swift */,
 				EE83EB8C1A75A0F9008A6745 /* ViewController.swift */,
-				EE83EB8E1A75A0F9008A6745 /* Main.storyboard */,
 				EE83EB911A75A0F9008A6745 /* Images.xcassets */,
-				EE83EB931A75A0F9008A6745 /* LaunchScreen.xib */,
 				EE83EB881A75A0F9008A6745 /* Supporting Files */,
 			);
 			path = PrettyWeather;
@@ -114,6 +142,7 @@
 		EE83EB881A75A0F9008A6745 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D97941A75A869009D8A2A /* Images */,
 				EE83EB891A75A0F9008A6745 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -136,6 +165,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EEE92C8F1A75A6E200860DFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D97AF1A75AADA009D8A2A /* LaunchScreen.xib */,
+				EE0D97A11A75A8C7009D8A2A /* PrettyWeatherViewController.swift */,
+				EE0D97B31A75B1EA009D8A2A /* WeatherResumeView.swift */,
+				EE0D97B51A75B78B009D8A2A /* WeatherForecastView.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +188,7 @@
 				EE83EB821A75A0F9008A6745 /* Frameworks */,
 				EE83EB831A75A0F9008A6745 /* Resources */,
 				085811214F33127801B37612 /* Copy Pods Resources */,
+				C0F4F34E395C7DD1FD940522 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,8 +259,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE83EB901A75A0F9008A6745 /* Main.storyboard in Resources */,
-				EE83EB951A75A0F9008A6745 /* LaunchScreen.xib in Resources */,
+				EE0D97A01A75A869009D8A2A /* 6.jpg in Resources */,
+				EE0D979F1A75A869009D8A2A /* 5.jpg in Resources */,
+				EE0D979E1A75A869009D8A2A /* 4.jpg in Resources */,
+				EE0D979B1A75A869009D8A2A /* 1.jpg in Resources */,
+				EE0D97B01A75AADA009D8A2A /* LaunchScreen.xib in Resources */,
+				EE0D979C1A75A869009D8A2A /* 2.jpg in Resources */,
+				EE0D979D1A75A869009D8A2A /* 3.jpg in Resources */,
 				EE83EB921A75A0F9008A6745 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +310,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C0F4F34E395C7DD1FD940522 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,6 +334,9 @@
 			files = (
 				EE83EB8D1A75A0F9008A6745 /* ViewController.swift in Sources */,
 				EE83EB8B1A75A0F9008A6745 /* AppDelegate.swift in Sources */,
+				EE0D97B41A75B1EA009D8A2A /* WeatherResumeView.swift in Sources */,
+				EE0D97A21A75A8C7009D8A2A /* PrettyWeatherViewController.swift in Sources */,
+				EE0D97B61A75B78B009D8A2A /* WeatherForecastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,25 +357,6 @@
 			targetProxy = EE83EB9B1A75A0F9008A6745 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EE83EB8E1A75A0F9008A6745 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE83EB8F1A75A0F9008A6745 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EE83EB931A75A0F9008A6745 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE83EB941A75A0F9008A6745 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EE83EBA21A75A0F9008A6745 /* Debug */ = {

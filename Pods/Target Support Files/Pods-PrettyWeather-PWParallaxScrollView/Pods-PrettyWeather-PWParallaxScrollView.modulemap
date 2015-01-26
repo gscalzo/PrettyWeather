@@ -1,0 +1,6 @@
+framework module PWParallaxScrollView {
+  umbrella header "Pods-PrettyWeather-PWParallaxScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}

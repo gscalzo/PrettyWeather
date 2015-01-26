@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let viewController = PrettyWeatherViewController()
+        
+        let mainWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
+        mainWindow.backgroundColor = UIColor.whiteColor()
+        mainWindow.rootViewController = viewController
+        mainWindow.makeKeyAndVisible()
+        window = mainWindow
+        
         return true
     }
 

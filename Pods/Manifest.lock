@@ -1,10 +1,13 @@
 PODS:
+  - Cartography (0.1.1)
   - PWParallaxScrollView (1.1.5)
 
 DEPENDENCIES:
+  - Cartography (~> 0.1)
   - PWParallaxScrollView (~> 1.1.5)
 
 SPEC CHECKSUMS:
+  Cartography: e625895e543d2316c782486c3970b30be4271391
   PWParallaxScrollView: bf7b67a37a4afc52ff22c2e627a1438a388beba3
 
 COCOAPODS: 0.36.0.beta.1
