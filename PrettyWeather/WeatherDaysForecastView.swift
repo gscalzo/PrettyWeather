@@ -1,5 +1,5 @@
 //
-//  WeatherForecastView.swift
+//  WeatherDaysForecastView.swift
 //  PrettyWeather
 //
 //  Created by Giordano Scalzo on 25/01/2015.
@@ -9,7 +9,7 @@
 import Foundation
 import Cartography
 
-class WeatherForecastView: UIView {
+class WeatherDaysForecastView: UIView {
     private var didSetupConstraints = false
     
     override init(frame: CGRect) {
@@ -26,20 +26,19 @@ class WeatherForecastView: UIView {
 
 
 // MARK: Setup
-private extension WeatherForecastView{
+private extension WeatherDaysForecastView{
     func setup(){
     }
 }
 
 // MARK: Layout
-extension WeatherForecastView{
+extension WeatherDaysForecastView{
     
     override func updateConstraints() {
         if didSetupConstraints == false {
             super.updateConstraints()
         }
         layout(self) { view in
-            view.width == view.superview!.width - 40
             view.height == 500
             return
         }
@@ -49,7 +48,7 @@ extension WeatherForecastView{
 }
 
 // MARK: Style
-private extension WeatherForecastView{
+private extension WeatherDaysForecastView{
     func style(){
         backgroundColor = UIColor.blueColor()
         
