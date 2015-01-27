@@ -32,10 +32,11 @@ class PrettyWeatherViewController: UIViewController {
 private extension PrettyWeatherViewController{
     func setup(){
         view.backgroundColor = UIColor.grayColor()
-        view.addSubview(scrollView)
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(resumeView)
         scrollView.addSubview(hourlyForecastView)
         scrollView.addSubview(daysForecastView)
+        view.addSubview(scrollView)
     }
 }
 

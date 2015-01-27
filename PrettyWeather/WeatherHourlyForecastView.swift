@@ -11,6 +11,8 @@ import Cartography
 
 class WeatherHourlyForecastView: UIView {
     private var didSetupConstraints = false
+    private let scrollView = UIScrollView()
+    private var forecastCells = Array<WeatherDayForecastView>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,12 +30,18 @@ class WeatherHourlyForecastView: UIView {
 // MARK: Setup
 private extension WeatherHourlyForecastView{
     func setup(){
+        for i in 0..<10 {
+            let cell = WeatherDayForecastView(frame: CGRectZero)
+            forecastCells.append(cell)
+            scrollView.addSubview(cell)
+        }
+        scrollView.showsHorizontalScrollIndicator = false
+        addSubview(scrollView)
     }
 }
 
 // MARK: Layout
 extension WeatherHourlyForecastView{
-    
     override func updateConstraints() {
         if didSetupConstraints == false {
             super.updateConstraints()
@@ -42,6 +50,38 @@ extension WeatherHourlyForecastView{
             view.height == 80
             return
         }
+        layout(scrollView) { view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
+        
+        layout(forecastCells.first!) { view in
+            view.left == view.superview!.left
+            return
+        }
+        layout(forecastCells.last!) { view in
+            view.right == view.superview!.right
+            return
+        }
+        
+        for idx in 1..<forecastCells.count {
+            let previousCell = forecastCells[idx-1]
+            let cell = forecastCells[idx]
+            layout(previousCell, cell) { view, view2 in
+                view.right == view2.left + 5
+                return
+            }
+        }
+        for cell in forecastCells {
+            layout(cell) { view in
+                view.width == view.height
+                view.height == view.superview!.height
+                view.top == view.superview!.top
+            }
+        }
+            
         super.updateConstraints()
         didSetupConstraints = true
     }
@@ -51,5 +91,9 @@ extension WeatherHourlyForecastView{
 private extension WeatherHourlyForecastView{
     func style(){
         backgroundColor = UIColor.blueColor()
+//        scrollView.backgroundColor = UIColor.redColor()
+        for cell in forecastCells {
+            cell.backgroundColor = UIColor.yellowColor()
+        }
     }
 }
