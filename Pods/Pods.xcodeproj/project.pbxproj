@@ -7,485 +7,526 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03D116113A8CE3098E20165E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427CD703418ACFF5236F869 /* View.swift */; };
-		0D29CDEC1FA8A99EED1FFFD2 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0553145A5CF2CD173D22AC1 /* Compound.swift */; };
-		0E66A1681208D82404B7DB79 /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1287721EB528375FABCA7D05 /* PWParallaxScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		23C2EC591F532B62F4FE17E9 /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 709FE51E10399F6507FCA96A /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25F5405C644DDC6B6A87EFDD /* Pods-PrettyWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBF37277ADE557FF688E7C /* Pods-PrettyWeather-dummy.m */; };
-		2B57F76AD0404244566FDDEB /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA55DA6DD0011E352A65BC0 /* Property.swift */; };
-		301F5FC92668205844C73444 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD84F92E37A6AE14FF062C /* Layout.swift */; };
-		3077671BE0F2F8010423D13B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D242FE79980C01B606A891A /* Context.swift */; };
-		3D57FB1E17B314F50555F502 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791E4D5E2207C0CF77DAD7DD /* Edges.swift */; };
-		46D56F92A3E118751933F7E5 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB9AF41809F48BC47CDD84 /* LayoutProxy.swift */; };
-		51652BBD8A50BF86CCCFF373 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFA042463F47D1D41916B81 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */; };
-		540CBFB9F2825EC59DAA93F9 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649083E4F5E5BEE73578ACEB /* Expression.swift */; };
-		5511D0635E9BF625B7C770E2 /* Pods-PrettyWeather-Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAAA2926DD1DAA2B0A3FF8C /* Pods-PrettyWeather-Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		588CBAE54A5DAFD71ED2FCE0 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366171F43549DD65D05123A5 /* Size.swift */; };
-		59C0F5A2C59E73BF964F246E /* Pods-PrettyWeather-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F19CD3FEDAB8B2CE17F570F /* Pods-PrettyWeather-Alamofire-dummy.m */; };
-		5A01E0976A8481824BAD8FD6 /* Pods-PrettyWeather-Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C93BDB79E399DF0379420A3F /* Pods-PrettyWeather-Cartography-dummy.m */; };
-		5F5F45D7E4A09A1C4B71031C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4643D775667CE4E5A3DE8952 /* Foundation.framework */; };
-		603DE4AE1F311DA2A1A1603C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5517F4202AF5FE3461537 /* Point.swift */; };
-		68720FE1E040654C1EAE9372 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70217B389AF2153E3521C7C3 /* Constraint.swift */; };
-		694EFD8B38BCA16F5C0CF39C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4643D775667CE4E5A3DE8952 /* Foundation.framework */; };
-		69E4C3018AA3977FBF7732F8 /* PWParallaxScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 448311E8B2566EB894165214 /* PWParallaxScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A1D1D4B415FF894349E4398 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A4E45763FDA3832147695D /* Edge.swift */; };
-		7858C0C9073177B68C4F00B7 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 789159873C5E889AA70EEB3C /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8160188C593F32BF09329420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4643D775667CE4E5A3DE8952 /* Foundation.framework */; };
-		91ACAE338BCC6F679B816859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4643D775667CE4E5A3DE8952 /* Foundation.framework */; };
-		BB8B34A5A82C4A8F01218BAF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DCDD45F6F0B50AE64B1A5B /* SwiftyJSON.swift */; };
-		C2FC3CFCCA9F2414DEB21282 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A940383A35511008A2230F3 /* Priority.swift */; };
-		C51E19159F117A9D9C6DB5A8 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779AA964594438A37BFA161 /* Alamofire.swift */; };
-		C7BEF4942327DF57AC317A19 /* Pods-PrettyWeather-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099278ACC7CB7C3CAF6ED75 /* Pods-PrettyWeather-SwiftyJSON-dummy.m */; };
-		CF800A83BED62061BAA5328E /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3FC1D45464E5F6EFA4DE0 /* ViewUtils.swift */; };
-		D532F3AD69713000AD8A0340 /* Pods-PrettyWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4628834776584ACFE91DA2DC /* Pods-PrettyWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D803141AE9D7836CBCCBA9E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4643D775667CE4E5A3DE8952 /* Foundation.framework */; };
-		DCAFF176419605AE01DC0774 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021A04567F244B199C7ED1D /* Coefficients.swift */; };
-		E2B90990F6537775E390E04B /* Pods-PrettyWeather-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B847940CB7DC59926B39EACA /* Pods-PrettyWeather-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA247A497849FA0E33D24C83 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4043EF94D635AD6B42EBD92B /* Dimension.swift */; };
+		045030ACC2B006B8822FE9C6 /* WIKFontIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E6111BFE00E92C4F818FBD /* WIKFontIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0460A98ABF6DA51349618D97 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9987CB6E98EE5958B774C1 /* Layout.swift */; };
+		0A1C941BFE984AC23D740517 /* Pods-PrettyWeather-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DAAA3F2E8CEFAF52B8831D /* Pods-PrettyWeather-SwiftyJSON-dummy.m */; };
+		0C2DAE554ACBE95AFEDFA508 /* Pods-PrettyWeather-WeatherIconsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B7EB53A1FC6D232D79A87D /* Pods-PrettyWeather-WeatherIconsKit-dummy.m */; };
+		0CC35CDB1AB9F6D6DC113F6B /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EEE2F9EDC856A4269B8394 /* Property.swift */; };
+		0F861AA48426F8C171B70450 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB43879E983A6BD126B55D9 /* Alamofire.swift */; };
+		112C91D940F76347AA3D1A79 /* Pods-PrettyWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A8F54D5B72AFA3EB8E3B7F /* Pods-PrettyWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14C138BC497B9D6272B1B8CB /* PWParallaxScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA256E697195E083D52FE18 /* PWParallaxScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A5BC30495A77C87DE2A58E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9FB4173C8677C8831C3ED /* View.swift */; };
+		1A2D5AB3474C41D95AA5A0EE /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CAA798693E93F168CF3D4E /* Size.swift */; };
+		276392614016B6C3D2B5E69D /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F650A3BCE70FA4B5C509E /* Context.swift */; };
+		30E2FFC49795028769610F48 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A23321E315BD011A082EEF /* ViewUtils.swift */; };
+		315DD9C6EA47226A9F1788A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		41C341383607C85C7DA9230C /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274A88ABE1440F4C21BF681 /* Compound.swift */; };
+		46E2334D937EC9D674B44CEA /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1607C290211C0137E4A644D2 /* FAKIcon.m */; };
+		498C74F55AE079D067186065 /* WeatherIconsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C43D892717A12DF12E79C525 /* WeatherIconsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B217E9E467FA07907D3E51 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF97AB8A5D165759519D8D /* Expression.swift */; };
+		5E92940F1FAD116E87B7171E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CFE41B906EE97C5A375373 /* UIKit.framework */; };
+		615C3FE8296C031ECC4D3B8A /* WIKFontIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1760A0FC8F77D4AC3D996 /* WIKFontIcon.m */; };
+		69D615E22935ECC5F1E8BBF9 /* Pods-PrettyWeather-Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ABB6F582A7F6F00AF3F8C3 /* Pods-PrettyWeather-Cartography-dummy.m */; };
+		6D0A94EA31AB522643345AEF /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 675B727A904DE89DEAE164E4 /* FAKIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73470B3E820E90305499F308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		7AF394BF6F23AF7015759766 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB87A5841EEA3C9C8840E64 /* LayoutProxy.swift */; };
+		7CFD36D103FA00E43C6E1EDB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4DE402D88FD2AD6AE66242 /* Dimension.swift */; };
+		839D088F194787A5AABF2AD9 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = F971BC43D94434F8788B2351 /* Priority.swift */; };
+		87C10696D2E67CC5FB497711 /* WeatherIcons-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB7C584E2782F99A7B7DA55A /* WeatherIcons-Regular.otf */; };
+		8B9EC48CEBAA1327A850025D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		8C616D714E17E25BAA6DA278 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA2849B932538A16983C9C4 /* CoreText.framework */; };
+		8CAE5EC23891B0CA99285832 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1739234A2A4C888E6587E /* Edges.swift */; };
+		8D87E4AB480BB1CBBAFD4397 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		A2E69A54BCA30476EFD046BF /* Pods-PrettyWeather-Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFC9CC5B8872C39D973650B /* Pods-PrettyWeather-Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7180034428ECAFEDB20C0A0 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5948E2361F27244FB3784814 /* Edge.swift */; };
+		ABAEC9032D0E33B48D1F5E09 /* Pods-PrettyWeather-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E3E3A97B6D664F495DF53A /* Pods-PrettyWeather-Alamofire-dummy.m */; };
+		ABDA3E9EB383FE3722B44F16 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73289E8FB6299B7C0AA08D9F /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */; };
+		AC6199D27B86221C09F89228 /* Pods-PrettyWeather-WeatherIconsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E82873E1295308920C650359 /* Pods-PrettyWeather-WeatherIconsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADA573CE67D0A57584CC488C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640076C40A585C8D47C6D7B /* SwiftyJSON.swift */; };
+		B046E8FFB57AEE0F1508A50D /* Pods-PrettyWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0257F6D570106F2BBF8F2F /* Pods-PrettyWeather-dummy.m */; };
+		CAB0315EE61595CA89001718 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0083F805C9F38B9A288B3F0 /* Coefficients.swift */; };
+		D87D4B4A3118CA439D06DB75 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD52173518E7A1DA0CAC5645 /* Point.swift */; };
+		DB62E0F141B9B16742959E50 /* Pods-PrettyWeather-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FED0C138954B7E6D5D26684 /* Pods-PrettyWeather-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF798C938BE267BD1C8A507F /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B83CDD8829E49827044B401 /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E082FAAA44849844B4E6567C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		E2FF5DA41A6331129A84C01F /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 498CB75A15E0AFE3BC407A05 /* PWParallaxScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EAC3BBD6B9CB23D8381CEBF9 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD90E35A227BA649D92F7A62 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB4132896D73E3D6EC6D1B8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCACF2C2EE8290A4D51044B /* Foundation.framework */; };
+		EBFD372AAFD6E50FE6E06BFC /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E15F012B465D31B78EED0C /* Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10FFCCEC640E8DF3ED961864 /* PBXContainerItemProxy */ = {
+		16CBD1BF1A8215E388A5FEFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0B528482DFEDD5BBF1019694 /* Project object */;
+			containerPortal = DAEDAE93898B8DB381A8F8D2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 137DC1604DCB7BC68F96325A;
-			remoteInfo = "Pods-PrettyWeather-SwiftyJSON";
-		};
-		5C3FEBB5691E5D15AB5BE440 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B528482DFEDD5BBF1019694 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0D6EE98E112D02F40A334C2;
+			remoteGlobalIDString = 56C8DB86E6FBD0F56686FEB7;
 			remoteInfo = "Pods-PrettyWeather-Alamofire";
 		};
-		A08D090E067C5A0AE4ED02CB /* PBXContainerItemProxy */ = {
+		33E64F60CF80E664BCA8D215 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0B528482DFEDD5BBF1019694 /* Project object */;
+			containerPortal = DAEDAE93898B8DB381A8F8D2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE8A84D820DEDD1A428D75DE;
+			remoteGlobalIDString = 269B249B78713E084E7A3668;
+			remoteInfo = "Pods-PrettyWeather-SwiftyJSON";
+		};
+		6439EE966559C32F72DE649B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAEDAE93898B8DB381A8F8D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264D02175FA47220F0032BEB;
 			remoteInfo = "Pods-PrettyWeather-PWParallaxScrollView";
 		};
-		BA3B5B5DE22BB1859C3AF312 /* PBXContainerItemProxy */ = {
+		850D1519F3AB6067FCE41805 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0B528482DFEDD5BBF1019694 /* Project object */;
+			containerPortal = DAEDAE93898B8DB381A8F8D2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8184A1CDEBAFF5068E8E5F6E;
+			remoteGlobalIDString = 58D1FDE94EA0AA6BF193AABD;
 			remoteInfo = "Pods-PrettyWeather-Cartography";
+		};
+		95C505F13CFACC04BCDEADA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAEDAE93898B8DB381A8F8D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3F218DC9BD9EF4741FC0F4B;
+			remoteInfo = "Pods-PrettyWeather-WeatherIconsKit";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03E8B2F7294560F68A084B71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BBD0085CB04A3841F2E6A42 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F57E7FB7DA5CAC1C134A88A /* Pods-PrettyWeather-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-Alamofire.modulemap"; sourceTree = "<group>"; };
-		110D673697A9D56471D30094 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
-		1287721EB528375FABCA7D05 /* PWParallaxScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PWParallaxScrollView.m; path = PWParallaxScrollView/PWParallaxScrollView.m; sourceTree = "<group>"; };
-		13F92BD762FCE201EB2F6294 /* Pods-PrettyWeather-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		1508217427C3036E397D2725 /* Pods-PrettyWeather-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Alamofire.xcconfig"; sourceTree = "<group>"; };
-		1AA2640850603423590AA7B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D242FE79980C01B606A891A /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
-		1DD64809D38B19979134E551 /* Pods-PrettyWeather-PWParallaxScrollView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-PWParallaxScrollView.modulemap"; sourceTree = "<group>"; };
-		2021A04567F244B199C7ED1D /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
-		2A940383A35511008A2230F3 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
-		3645813025E7672E73D62FC0 /* Pods-PrettyWeather-Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Cartography.xcconfig"; sourceTree = "<group>"; };
-		366171F43549DD65D05123A5 /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
-		375DB31D5098B3C62C9B887E /* Pods_PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4043EF94D635AD6B42EBD92B /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
-		448311E8B2566EB894165214 /* PWParallaxScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PWParallaxScrollView.h; path = PWParallaxScrollView/PWParallaxScrollView.h; sourceTree = "<group>"; };
-		4628834776584ACFE91DA2DC /* Pods-PrettyWeather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-umbrella.h"; sourceTree = "<group>"; };
-		4643D775667CE4E5A3DE8952 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4A409A08F40C198A803E815B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AEE8BD94764D3446BC874E2 /* Pods-PrettyWeather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrettyWeather-resources.sh"; sourceTree = "<group>"; };
-		5779AA964594438A37BFA161 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		5C66562952FBFD30486F9373 /* Pods-PrettyWeather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrettyWeather-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6099278ACC7CB7C3CAF6ED75 /* Pods-PrettyWeather-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		649083E4F5E5BEE73578ACEB /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
-		6EC5517F4202AF5FE3461537 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
-		70217B389AF2153E3521C7C3 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
-		709FE51E10399F6507FCA96A /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-PWParallaxScrollView-umbrella.h"; sourceTree = "<group>"; };
-		76DB9AF41809F48BC47CDD84 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
-		77FD84F92E37A6AE14FF062C /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Cartography/Layout.swift; sourceTree = "<group>"; };
-		789159873C5E889AA70EEB3C /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		791E4D5E2207C0CF77DAD7DD /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
-		7AA55DA6DD0011E352A65BC0 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
-		7B03E195043BCD291A04D152 /* Pods-PrettyWeather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrettyWeather-frameworks.sh"; sourceTree = "<group>"; };
-		850A63A1AE750631B05B81E4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88DCDD45F6F0B50AE64B1A5B /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		893E3B19EA23D1F70F63C6C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		896915C971F68BEEDB0802B1 /* Pods-PrettyWeather-Cartography-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Cartography-Private.xcconfig"; sourceTree = "<group>"; };
-		8F1D24400D587718C9999301 /* Pods-PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
-		90FAD31734C956619FC2C468 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91A4E45763FDA3832147695D /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
-		91E7BCA7964B09429ACB9557 /* Pods-PrettyWeather-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		9A594B0F5AADAE24D066040F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CB62DE49978422E3B9C7345 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F19CD3FEDAB8B2CE17F570F /* Pods-PrettyWeather-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-Alamofire-dummy.m"; sourceTree = "<group>"; };
-		A2E172476616957AC2738AAB /* Pods-PrettyWeather-Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-Cartography.modulemap"; sourceTree = "<group>"; };
-		A855FF5702A58FDF59968FA5 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		AD7AA1C93D6BBECC6852F886 /* Pods-PrettyWeather-PWParallaxScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-PWParallaxScrollView.xcconfig"; sourceTree = "<group>"; };
-		B2352EE50240FDE1249FE838 /* Pods-PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
-		B539F9C218CB5AA24B742CFF /* Pods-PrettyWeather-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		B82CA9EECF8633F3848CFF4A /* Pods-PrettyWeather-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		B847940CB7DC59926B39EACA /* Pods-PrettyWeather-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		C0553145A5CF2CD173D22AC1 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
-		C93BDB79E399DF0379420A3F /* Pods-PrettyWeather-Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-Cartography-dummy.m"; sourceTree = "<group>"; };
-		CBAAA2926DD1DAA2B0A3FF8C /* Pods-PrettyWeather-Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Cartography-umbrella.h"; sourceTree = "<group>"; };
-		D1CEE8534800CCC437FDBB9F /* Pods-PrettyWeather-Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Cartography-prefix.pch"; sourceTree = "<group>"; };
-		D427CD703418ACFF5236F869 /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
-		D7ABBDA5CAE0AA0D12E9F6F1 /* PWParallaxScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWParallaxScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA9A0E3CB6E1FA658A95A8F4 /* Pods-PrettyWeather-PWParallaxScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-PWParallaxScrollView-prefix.pch"; sourceTree = "<group>"; };
-		DACB5D0F255592FF1D2E0C8F /* Pods-PrettyWeather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrettyWeather-acknowledgements.plist"; sourceTree = "<group>"; };
-		E0B3FC1D45464E5F6EFA4DE0 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
-		E343A9CBFEEACA799A80F875 /* Pods-PrettyWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather.modulemap"; sourceTree = "<group>"; };
-		E8B31E5612C33BD0D7B848FC /* Pods-PrettyWeather-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-environment.h"; sourceTree = "<group>"; };
-		ECFBF37277ADE557FF688E7C /* Pods-PrettyWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-dummy.m"; sourceTree = "<group>"; };
-		F57DC08B4D64FF40123C7C96 /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig"; sourceTree = "<group>"; };
-		FDFA042463F47D1D41916B81 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-PWParallaxScrollView-dummy.m"; sourceTree = "<group>"; };
+		04A1760A0FC8F77D4AC3D996 /* WIKFontIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WIKFontIcon.m; path = WeatherIconsKit/WIKFontIcon.m; sourceTree = "<group>"; };
+		04A8F54D5B72AFA3EB8E3B7F /* Pods-PrettyWeather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-umbrella.h"; sourceTree = "<group>"; };
+		04B74ECE274A98EF7654F2A1 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F8A8F8FE4D2A20B9340CBE /* Pods-PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
+		0A47B52CCCFC0CDADBBF2D2F /* Pods-PrettyWeather-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		0B83CDD8829E49827044B401 /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-PWParallaxScrollView-umbrella.h"; sourceTree = "<group>"; };
+		1274A88ABE1440F4C21BF681 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
+		1607C290211C0137E4A644D2 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = WeatherIconsKit/FAKIcon.m; sourceTree = "<group>"; };
+		162494E64C6343A00FDC99F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17477E0217AF18F84B843639 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1F774785BAA9ADF09237EE20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233DC43C1AFFD5141B94AB2E /* Pods-PrettyWeather-PWParallaxScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-PWParallaxScrollView-prefix.pch"; sourceTree = "<group>"; };
+		25339C40795379F1F527C0C9 /* Pods-PrettyWeather-WeatherIconsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-WeatherIconsKit.modulemap"; sourceTree = "<group>"; };
+		31762A81296EDB106FD31DDA /* Pods-PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		317E54EA49D04C2E8D50B142 /* Pods_PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CFE41B906EE97C5A375373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		33E9F0F75DA464539B680CDF /* Pods-PrettyWeather-WeatherIconsKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-WeatherIconsKit-Private.xcconfig"; sourceTree = "<group>"; };
+		3820537EF1603385A1F78F73 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		42EEE2F9EDC856A4269B8394 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		498CB75A15E0AFE3BC407A05 /* PWParallaxScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PWParallaxScrollView.m; path = PWParallaxScrollView/PWParallaxScrollView.m; sourceTree = "<group>"; };
+		49EA4CED11210969F967723A /* Pods-PrettyWeather-WeatherIconsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-WeatherIconsKit-prefix.pch"; sourceTree = "<group>"; };
+		49F54B9D696A137ED151B009 /* Pods-PrettyWeather-WeatherIconsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-WeatherIconsKit.xcconfig"; sourceTree = "<group>"; };
+		54DAAA3F2E8CEFAF52B8831D /* Pods-PrettyWeather-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		5640076C40A585C8D47C6D7B /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		587D680B61E4EF9B364AE942 /* Pods-PrettyWeather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrettyWeather-acknowledgements.plist"; sourceTree = "<group>"; };
+		5917249641212C3FA12F2BDA /* Pods-PrettyWeather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrettyWeather-frameworks.sh"; sourceTree = "<group>"; };
+		5948E2361F27244FB3784814 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		5CA256E697195E083D52FE18 /* PWParallaxScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PWParallaxScrollView.h; path = PWParallaxScrollView/PWParallaxScrollView.h; sourceTree = "<group>"; };
+		5D60B2A152838DFAE4420A20 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		5E0257F6D570106F2BBF8F2F /* Pods-PrettyWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-dummy.m"; sourceTree = "<group>"; };
+		5EF91E6F99CCC305DDAF6D21 /* Pods-PrettyWeather-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-environment.h"; sourceTree = "<group>"; };
+		64F92E7F3C3143E6C037C551 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675B727A904DE89DEAE164E4 /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = WeatherIconsKit/FAKIcon.h; sourceTree = "<group>"; };
+		68ABB6F582A7F6F00AF3F8C3 /* Pods-PrettyWeather-Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-Cartography-dummy.m"; sourceTree = "<group>"; };
+		69E9F048BAD9D8F239FA9926 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB43879E983A6BD126B55D9 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		6DB87A5841EEA3C9C8840E64 /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		6DCACF2C2EE8290A4D51044B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6EF00FBFF374DFF7F7E99CFA /* Pods-PrettyWeather-Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Cartography-prefix.pch"; sourceTree = "<group>"; };
+		73289E8FB6299B7C0AA08D9F /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-PWParallaxScrollView-dummy.m"; sourceTree = "<group>"; };
+		78C6C304EF23EEB28065D8EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CABA440B0CCFBED6D1654E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E9987CB6E98EE5958B774C1 /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Cartography/Layout.swift; sourceTree = "<group>"; };
+		7F942EE4BA69D529D170F4BB /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig"; sourceTree = "<group>"; };
+		84F280AE64E497C6311C6550 /* Pods-PrettyWeather-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-Alamofire.modulemap"; sourceTree = "<group>"; };
+		89E6111BFE00E92C4F818FBD /* WIKFontIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WIKFontIcon.h; path = WeatherIconsKit/WIKFontIcon.h; sourceTree = "<group>"; };
+		8A9C6584FC584A120CA99A22 /* Pods-PrettyWeather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrettyWeather-acknowledgements.markdown"; sourceTree = "<group>"; };
+		901D0E5A4E77A5A67BD65E16 /* Pods-PrettyWeather-Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-Cartography.modulemap"; sourceTree = "<group>"; };
+		934F6A58CAC69274B0150F52 /* PWParallaxScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWParallaxScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		936B4E66F7737A9AA7EF7249 /* Pods-PrettyWeather-PWParallaxScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-PWParallaxScrollView.xcconfig"; sourceTree = "<group>"; };
+		9379540870D5D29F9458A47D /* Pods-PrettyWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather.modulemap"; sourceTree = "<group>"; };
+		937F650A3BCE70FA4B5C509E /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
+		96EA6ECA529271A573B33C2C /* Pods-PrettyWeather-Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Cartography.xcconfig"; sourceTree = "<group>"; };
+		97EF97AB8A5D165759519D8D /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		9DFC9CC5B8872C39D973650B /* Pods-PrettyWeather-Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Cartography-umbrella.h"; sourceTree = "<group>"; };
+		9FED0C138954B7E6D5D26684 /* Pods-PrettyWeather-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		A3A23321E315BD011A082EEF /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
+		A7DBB7E40E35DB7632AA1658 /* Pods-PrettyWeather-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		AAA2849B932538A16983C9C4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		AB237D9752FBAE93E7915376 /* Pods-PrettyWeather-Cartography-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Cartography-Private.xcconfig"; sourceTree = "<group>"; };
+		AB72296A01AF8F754DBFF839 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7C584E2782F99A7B7DA55A /* WeatherIcons-Regular.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "WeatherIcons-Regular.otf"; path = "WeatherIconsKit/WeatherIcons-Regular.otf"; sourceTree = "<group>"; };
+		AD52173518E7A1DA0CAC5645 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		BD4DE402D88FD2AD6AE66242 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
+		BD90E35A227BA649D92F7A62 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		C43D892717A12DF12E79C525 /* WeatherIconsKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeatherIconsKit.h; path = WeatherIconsKit/WeatherIconsKit.h; sourceTree = "<group>"; };
+		C4A9FB4173C8677C8831C3ED /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
+		C4CAA798693E93F168CF3D4E /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
+		C77A1402E1D5EEA767E770EE /* Pods-PrettyWeather-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrettyWeather-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		D2A1739234A2A4C888E6587E /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
+		D5B7EB53A1FC6D232D79A87D /* Pods-PrettyWeather-WeatherIconsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-WeatherIconsKit-dummy.m"; sourceTree = "<group>"; };
+		D7E15F012B465D31B78EED0C /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
+		DD0D72616064140F248473EF /* Pods-PrettyWeather-PWParallaxScrollView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PrettyWeather-PWParallaxScrollView.modulemap"; sourceTree = "<group>"; };
+		DE8EDA34B463B9B60412A7CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0083F805C9F38B9A288B3F0 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
+		E052F59921231B2C42C9BF64 /* Pods-PrettyWeather-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		E82873E1295308920C650359 /* Pods-PrettyWeather-WeatherIconsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-WeatherIconsKit-umbrella.h"; sourceTree = "<group>"; };
+		EC93E8152411F26AC61B6EF3 /* WeatherIconsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherIconsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63B85404F1D9BB2A4D6CB2D /* Pods-PrettyWeather-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrettyWeather-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		F6E3E3A97B6D664F495DF53A /* Pods-PrettyWeather-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrettyWeather-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		F971BC43D94434F8788B2351 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		FAE5AF4AFE7E6CF4B2CEB5E0 /* Pods-PrettyWeather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrettyWeather-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3842BCEDECAAA7756ED42345 /* Frameworks */ = {
+		243935C89ABDAD845A1560B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8160188C593F32BF09329420 /* Foundation.framework in Frameworks */,
+				8D87E4AB480BB1CBBAFD4397 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C765D3A673D323D00E0BC07 /* Frameworks */ = {
+		922CDC96BDB55A5170E132CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F5F45D7E4A09A1C4B71031C /* Foundation.framework in Frameworks */,
+				8B9EC48CEBAA1327A850025D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60033F5AE8750AFEF39E586F /* Frameworks */ = {
+		B0CD94EBF2BF9DB49D2DF974 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D803141AE9D7836CBCCBA9E9 /* Foundation.framework in Frameworks */,
+				73470B3E820E90305499F308 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADA77D345927C8C9E0ABBE75 /* Frameworks */ = {
+		B0E446FA343280FA4F52E75A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				694EFD8B38BCA16F5C0CF39C /* Foundation.framework in Frameworks */,
+				EB4132896D73E3D6EC6D1B8C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7F72E37DD18783B4447ED18 /* Frameworks */ = {
+		BE8BE0FBEC644B9407D3100B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91ACAE338BCC6F679B816859 /* Foundation.framework in Frameworks */,
+				8C616D714E17E25BAA6DA278 /* CoreText.framework in Frameworks */,
+				E082FAAA44849844B4E6567C /* Foundation.framework in Frameworks */,
+				5E92940F1FAD116E87B7171E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38CA7E3E9D164C731CC89C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315DD9C6EA47226A9F1788A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ADEE8F33DB6B88D48E4EE2A /* PWParallaxScrollView */ = {
+		00EA6EDDB8DAC955F2D57708 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				448311E8B2566EB894165214 /* PWParallaxScrollView.h */,
-				1287721EB528375FABCA7D05 /* PWParallaxScrollView.m */,
-				3058865743503BACFD18433B /* Support Files */,
+				AB7C584E2782F99A7B7DA55A /* WeatherIcons-Regular.otf */,
 			);
-			path = PWParallaxScrollView;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		1655A2683EC1D35FDD8F1BCF /* Targets Support Files */ = {
+		073BB61784910CE5B7C0694B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				95627170927E74F185865B45 /* Pods-PrettyWeather */,
+				AAA2849B932538A16983C9C4 /* CoreText.framework */,
+				6DCACF2C2EE8290A4D51044B /* Foundation.framework */,
+				32CFE41B906EE97C5A375373 /* UIKit.framework */,
 			);
-			name = "Targets Support Files";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		26184EB4508A3E430FC50E1D /* Products */ = {
+		080D28F21FC9C5A1A4A4FD95 = {
 			isa = PBXGroup;
 			children = (
-				850A63A1AE750631B05B81E4 /* Alamofire.framework */,
-				0BBD0085CB04A3841F2E6A42 /* Cartography.framework */,
-				D7ABBDA5CAE0AA0D12E9F6F1 /* PWParallaxScrollView.framework */,
-				375DB31D5098B3C62C9B887E /* Pods_PrettyWeather.framework */,
-				4A409A08F40C198A803E815B /* SwiftyJSON.framework */,
+				17477E0217AF18F84B843639 /* Podfile */,
+				92CC0E337F8536956B92CAC8 /* Frameworks */,
+				795C3FDE8BD9528ACD6DD290 /* Pods */,
+				842974176D961A08B1844788 /* Products */,
+				575D7463634B36824C414478 /* Targets Support Files */,
 			);
-			name = Products;
 			sourceTree = "<group>";
 		};
-		3058865743503BACFD18433B /* Support Files */ = {
+		23B1CA7CB32FD0E80E7A9CC9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				03E8B2F7294560F68A084B71 /* Info.plist */,
-				1DD64809D38B19979134E551 /* Pods-PrettyWeather-PWParallaxScrollView.modulemap */,
-				AD7AA1C93D6BBECC6852F886 /* Pods-PrettyWeather-PWParallaxScrollView.xcconfig */,
-				F57DC08B4D64FF40123C7C96 /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */,
-				FDFA042463F47D1D41916B81 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */,
-				DA9A0E3CB6E1FA658A95A8F4 /* Pods-PrettyWeather-PWParallaxScrollView-prefix.pch */,
-				709FE51E10399F6507FCA96A /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */,
+				7CABA440B0CCFBED6D1654E6 /* Info.plist */,
+				25339C40795379F1F527C0C9 /* Pods-PrettyWeather-WeatherIconsKit.modulemap */,
+				49F54B9D696A137ED151B009 /* Pods-PrettyWeather-WeatherIconsKit.xcconfig */,
+				33E9F0F75DA464539B680CDF /* Pods-PrettyWeather-WeatherIconsKit-Private.xcconfig */,
+				D5B7EB53A1FC6D232D79A87D /* Pods-PrettyWeather-WeatherIconsKit-dummy.m */,
+				49EA4CED11210969F967723A /* Pods-PrettyWeather-WeatherIconsKit-prefix.pch */,
+				E82873E1295308920C650359 /* Pods-PrettyWeather-WeatherIconsKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PrettyWeather-WeatherIconsKit";
+			sourceTree = "<group>";
+		};
+		391532BA05974CD5F7FC8EA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F774785BAA9ADF09237EE20 /* Info.plist */,
+				DD0D72616064140F248473EF /* Pods-PrettyWeather-PWParallaxScrollView.modulemap */,
+				936B4E66F7737A9AA7EF7249 /* Pods-PrettyWeather-PWParallaxScrollView.xcconfig */,
+				7F942EE4BA69D529D170F4BB /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */,
+				73289E8FB6299B7C0AA08D9F /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m */,
+				233DC43C1AFFD5141B94AB2E /* Pods-PrettyWeather-PWParallaxScrollView-prefix.pch */,
+				0B83CDD8829E49827044B401 /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-PrettyWeather-PWParallaxScrollView";
 			sourceTree = "<group>";
 		};
-		35E60DCFAD2021CD5552163C /* Cartography */ = {
+		575D7463634B36824C414478 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2021A04567F244B199C7ED1D /* Coefficients.swift */,
-				C0553145A5CF2CD173D22AC1 /* Compound.swift */,
-				70217B389AF2153E3521C7C3 /* Constraint.swift */,
-				1D242FE79980C01B606A891A /* Context.swift */,
-				4043EF94D635AD6B42EBD92B /* Dimension.swift */,
-				91A4E45763FDA3832147695D /* Edge.swift */,
-				791E4D5E2207C0CF77DAD7DD /* Edges.swift */,
-				649083E4F5E5BEE73578ACEB /* Expression.swift */,
-				77FD84F92E37A6AE14FF062C /* Layout.swift */,
-				76DB9AF41809F48BC47CDD84 /* LayoutProxy.swift */,
-				6EC5517F4202AF5FE3461537 /* Point.swift */,
-				2A940383A35511008A2230F3 /* Priority.swift */,
-				7AA55DA6DD0011E352A65BC0 /* Property.swift */,
-				366171F43549DD65D05123A5 /* Size.swift */,
-				D427CD703418ACFF5236F869 /* View.swift */,
-				E0B3FC1D45464E5F6EFA4DE0 /* ViewUtils.swift */,
-				61C7664F2BA7FDFEC7D5B2F4 /* Support Files */,
+				596EF7C0156AEEA869C8DF55 /* Pods-PrettyWeather */,
 			);
-			path = Cartography;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3BFA485F5249F8A68B8DD422 /* Frameworks */ = {
+		596EF7C0156AEEA869C8DF55 /* Pods-PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
-				65116ECC9C8D54D6C9732F62 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		58DA387975A3ADD4572FABE4 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				88DCDD45F6F0B50AE64B1A5B /* SwiftyJSON.swift */,
-				D0FFC367FE2B1F1B5A8DB076 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		5D91B77B9D595C690DECE4C7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B817DF9BDF8857E6EA7C2F09 /* Alamofire */,
-				35E60DCFAD2021CD5552163C /* Cartography */,
-				0ADEE8F33DB6B88D48E4EE2A /* PWParallaxScrollView */,
-				58DA387975A3ADD4572FABE4 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		61C7664F2BA7FDFEC7D5B2F4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1AA2640850603423590AA7B6 /* Info.plist */,
-				A2E172476616957AC2738AAB /* Pods-PrettyWeather-Cartography.modulemap */,
-				3645813025E7672E73D62FC0 /* Pods-PrettyWeather-Cartography.xcconfig */,
-				896915C971F68BEEDB0802B1 /* Pods-PrettyWeather-Cartography-Private.xcconfig */,
-				C93BDB79E399DF0379420A3F /* Pods-PrettyWeather-Cartography-dummy.m */,
-				D1CEE8534800CCC437FDBB9F /* Pods-PrettyWeather-Cartography-prefix.pch */,
-				CBAAA2926DD1DAA2B0A3FF8C /* Pods-PrettyWeather-Cartography-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-PrettyWeather-Cartography";
-			sourceTree = "<group>";
-		};
-		621F17E6AE0B943145BF4B39 = {
-			isa = PBXGroup;
-			children = (
-				9A594B0F5AADAE24D066040F /* Podfile */,
-				3BFA485F5249F8A68B8DD422 /* Frameworks */,
-				5D91B77B9D595C690DECE4C7 /* Pods */,
-				26184EB4508A3E430FC50E1D /* Products */,
-				1655A2683EC1D35FDD8F1BCF /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		65116ECC9C8D54D6C9732F62 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4643D775667CE4E5A3DE8952 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		844BB0D2280FD8572038AFBF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9CB62DE49978422E3B9C7345 /* Info.plist */,
-				0F57E7FB7DA5CAC1C134A88A /* Pods-PrettyWeather-Alamofire.modulemap */,
-				1508217427C3036E397D2725 /* Pods-PrettyWeather-Alamofire.xcconfig */,
-				110D673697A9D56471D30094 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */,
-				9F19CD3FEDAB8B2CE17F570F /* Pods-PrettyWeather-Alamofire-dummy.m */,
-				B82CA9EECF8633F3848CFF4A /* Pods-PrettyWeather-Alamofire-prefix.pch */,
-				B847940CB7DC59926B39EACA /* Pods-PrettyWeather-Alamofire-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-PrettyWeather-Alamofire";
-			sourceTree = "<group>";
-		};
-		95627170927E74F185865B45 /* Pods-PrettyWeather */ = {
-			isa = PBXGroup;
-			children = (
-				893E3B19EA23D1F70F63C6C1 /* Info.plist */,
-				E343A9CBFEEACA799A80F875 /* Pods-PrettyWeather.modulemap */,
-				5C66562952FBFD30486F9373 /* Pods-PrettyWeather-acknowledgements.markdown */,
-				DACB5D0F255592FF1D2E0C8F /* Pods-PrettyWeather-acknowledgements.plist */,
-				ECFBF37277ADE557FF688E7C /* Pods-PrettyWeather-dummy.m */,
-				E8B31E5612C33BD0D7B848FC /* Pods-PrettyWeather-environment.h */,
-				7B03E195043BCD291A04D152 /* Pods-PrettyWeather-frameworks.sh */,
-				4AEE8BD94764D3446BC874E2 /* Pods-PrettyWeather-resources.sh */,
-				4628834776584ACFE91DA2DC /* Pods-PrettyWeather-umbrella.h */,
-				B2352EE50240FDE1249FE838 /* Pods-PrettyWeather.debug.xcconfig */,
-				8F1D24400D587718C9999301 /* Pods-PrettyWeather.release.xcconfig */,
+				DE8EDA34B463B9B60412A7CC /* Info.plist */,
+				9379540870D5D29F9458A47D /* Pods-PrettyWeather.modulemap */,
+				8A9C6584FC584A120CA99A22 /* Pods-PrettyWeather-acknowledgements.markdown */,
+				587D680B61E4EF9B364AE942 /* Pods-PrettyWeather-acknowledgements.plist */,
+				5E0257F6D570106F2BBF8F2F /* Pods-PrettyWeather-dummy.m */,
+				5EF91E6F99CCC305DDAF6D21 /* Pods-PrettyWeather-environment.h */,
+				5917249641212C3FA12F2BDA /* Pods-PrettyWeather-frameworks.sh */,
+				FAE5AF4AFE7E6CF4B2CEB5E0 /* Pods-PrettyWeather-resources.sh */,
+				04A8F54D5B72AFA3EB8E3B7F /* Pods-PrettyWeather-umbrella.h */,
+				31762A81296EDB106FD31DDA /* Pods-PrettyWeather.debug.xcconfig */,
+				04F8A8F8FE4D2A20B9340CBE /* Pods-PrettyWeather.release.xcconfig */,
 			);
 			name = "Pods-PrettyWeather";
 			path = "Target Support Files/Pods-PrettyWeather";
 			sourceTree = "<group>";
 		};
-		B817DF9BDF8857E6EA7C2F09 /* Alamofire */ = {
+		5E6D33FF53EE9C6718138F49 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				5779AA964594438A37BFA161 /* Alamofire.swift */,
-				844BB0D2280FD8572038AFBF /* Support Files */,
+				5640076C40A585C8D47C6D7B /* SwiftyJSON.swift */,
+				CC86D42B4EED7C83D2004D84 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		795C3FDE8BD9528ACD6DD290 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A84E1FCB031C7513D059B77 /* Alamofire */,
+				AF9664D2F17318A405C73EC5 /* Cartography */,
+				A3B55BB8D720B477D2422AFF /* PWParallaxScrollView */,
+				5E6D33FF53EE9C6718138F49 /* SwiftyJSON */,
+				F0849BE43AC47477DA535635 /* WeatherIconsKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A84E1FCB031C7513D059B77 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				6DB43879E983A6BD126B55D9 /* Alamofire.swift */,
+				EBB057B37E96B868A0130452 /* Support Files */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		D0FFC367FE2B1F1B5A8DB076 /* Support Files */ = {
+		842974176D961A08B1844788 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90FAD31734C956619FC2C468 /* Info.plist */,
-				B539F9C218CB5AA24B742CFF /* Pods-PrettyWeather-SwiftyJSON.modulemap */,
-				91E7BCA7964B09429ACB9557 /* Pods-PrettyWeather-SwiftyJSON.xcconfig */,
-				A855FF5702A58FDF59968FA5 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */,
-				6099278ACC7CB7C3CAF6ED75 /* Pods-PrettyWeather-SwiftyJSON-dummy.m */,
-				13F92BD762FCE201EB2F6294 /* Pods-PrettyWeather-SwiftyJSON-prefix.pch */,
-				789159873C5E889AA70EEB3C /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */,
+				AB72296A01AF8F754DBFF839 /* Alamofire.framework */,
+				04B74ECE274A98EF7654F2A1 /* Cartography.framework */,
+				934F6A58CAC69274B0150F52 /* PWParallaxScrollView.framework */,
+				317E54EA49D04C2E8D50B142 /* Pods_PrettyWeather.framework */,
+				64F92E7F3C3143E6C037C551 /* SwiftyJSON.framework */,
+				EC93E8152411F26AC61B6EF3 /* WeatherIconsKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92CC0E337F8536956B92CAC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				073BB61784910CE5B7C0694B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3B55BB8D720B477D2422AFF /* PWParallaxScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5CA256E697195E083D52FE18 /* PWParallaxScrollView.h */,
+				498CB75A15E0AFE3BC407A05 /* PWParallaxScrollView.m */,
+				391532BA05974CD5F7FC8EA0 /* Support Files */,
+			);
+			path = PWParallaxScrollView;
+			sourceTree = "<group>";
+		};
+		AF9664D2F17318A405C73EC5 /* Cartography */ = {
+			isa = PBXGroup;
+			children = (
+				E0083F805C9F38B9A288B3F0 /* Coefficients.swift */,
+				1274A88ABE1440F4C21BF681 /* Compound.swift */,
+				D7E15F012B465D31B78EED0C /* Constraint.swift */,
+				937F650A3BCE70FA4B5C509E /* Context.swift */,
+				BD4DE402D88FD2AD6AE66242 /* Dimension.swift */,
+				5948E2361F27244FB3784814 /* Edge.swift */,
+				D2A1739234A2A4C888E6587E /* Edges.swift */,
+				97EF97AB8A5D165759519D8D /* Expression.swift */,
+				7E9987CB6E98EE5958B774C1 /* Layout.swift */,
+				6DB87A5841EEA3C9C8840E64 /* LayoutProxy.swift */,
+				AD52173518E7A1DA0CAC5645 /* Point.swift */,
+				F971BC43D94434F8788B2351 /* Priority.swift */,
+				42EEE2F9EDC856A4269B8394 /* Property.swift */,
+				C4CAA798693E93F168CF3D4E /* Size.swift */,
+				C4A9FB4173C8677C8831C3ED /* View.swift */,
+				A3A23321E315BD011A082EEF /* ViewUtils.swift */,
+				B3A9ECFE1E1A32BDB3BA0B03 /* Support Files */,
+			);
+			path = Cartography;
+			sourceTree = "<group>";
+		};
+		B3A9ECFE1E1A32BDB3BA0B03 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78C6C304EF23EEB28065D8EA /* Info.plist */,
+				901D0E5A4E77A5A67BD65E16 /* Pods-PrettyWeather-Cartography.modulemap */,
+				96EA6ECA529271A573B33C2C /* Pods-PrettyWeather-Cartography.xcconfig */,
+				AB237D9752FBAE93E7915376 /* Pods-PrettyWeather-Cartography-Private.xcconfig */,
+				68ABB6F582A7F6F00AF3F8C3 /* Pods-PrettyWeather-Cartography-dummy.m */,
+				6EF00FBFF374DFF7F7E99CFA /* Pods-PrettyWeather-Cartography-prefix.pch */,
+				9DFC9CC5B8872C39D973650B /* Pods-PrettyWeather-Cartography-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PrettyWeather-Cartography";
+			sourceTree = "<group>";
+		};
+		CC86D42B4EED7C83D2004D84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				162494E64C6343A00FDC99F9 /* Info.plist */,
+				A7DBB7E40E35DB7632AA1658 /* Pods-PrettyWeather-SwiftyJSON.modulemap */,
+				0A47B52CCCFC0CDADBBF2D2F /* Pods-PrettyWeather-SwiftyJSON.xcconfig */,
+				3820537EF1603385A1F78F73 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */,
+				54DAAA3F2E8CEFAF52B8831D /* Pods-PrettyWeather-SwiftyJSON-dummy.m */,
+				E052F59921231B2C42C9BF64 /* Pods-PrettyWeather-SwiftyJSON-prefix.pch */,
+				BD90E35A227BA649D92F7A62 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-PrettyWeather-SwiftyJSON";
 			sourceTree = "<group>";
 		};
+		EBB057B37E96B868A0130452 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				69E9F048BAD9D8F239FA9926 /* Info.plist */,
+				84F280AE64E497C6311C6550 /* Pods-PrettyWeather-Alamofire.modulemap */,
+				C77A1402E1D5EEA767E770EE /* Pods-PrettyWeather-Alamofire.xcconfig */,
+				5D60B2A152838DFAE4420A20 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */,
+				F6E3E3A97B6D664F495DF53A /* Pods-PrettyWeather-Alamofire-dummy.m */,
+				F63B85404F1D9BB2A4D6CB2D /* Pods-PrettyWeather-Alamofire-prefix.pch */,
+				9FED0C138954B7E6D5D26684 /* Pods-PrettyWeather-Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PrettyWeather-Alamofire";
+			sourceTree = "<group>";
+		};
+		F0849BE43AC47477DA535635 /* WeatherIconsKit */ = {
+			isa = PBXGroup;
+			children = (
+				675B727A904DE89DEAE164E4 /* FAKIcon.h */,
+				1607C290211C0137E4A644D2 /* FAKIcon.m */,
+				89E6111BFE00E92C4F818FBD /* WIKFontIcon.h */,
+				04A1760A0FC8F77D4AC3D996 /* WIKFontIcon.m */,
+				C43D892717A12DF12E79C525 /* WeatherIconsKit.h */,
+				00EA6EDDB8DAC955F2D57708 /* Resources */,
+				23B1CA7CB32FD0E80E7A9CC9 /* Support Files */,
+			);
+			path = WeatherIconsKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		270CC1F88706740E42021AA7 /* Headers */ = {
+		0A243863287BB02B04651B5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5511D0635E9BF625B7C770E2 /* Pods-PrettyWeather-Cartography-umbrella.h in Headers */,
+				14C138BC497B9D6272B1B8CB /* PWParallaxScrollView.h in Headers */,
+				DF798C938BE267BD1C8A507F /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3198900F15CFF94425AB277D /* Headers */ = {
+		A8E4EB7DFD90976D75E41E07 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7858C0C9073177B68C4F00B7 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h in Headers */,
+				112C91D940F76347AA3D1A79 /* Pods-PrettyWeather-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		916A841CAB21D3664130F4B3 /* Headers */ = {
+		B0E5A6C1C3A27DC8E85445C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B90990F6537775E390E04B /* Pods-PrettyWeather-Alamofire-umbrella.h in Headers */,
+				EAC3BBD6B9CB23D8381CEBF9 /* Pods-PrettyWeather-SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B65C4E1B255E8754A5371CAD /* Headers */ = {
+		B652EDCDBCD9B5A5495E39C0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D532F3AD69713000AD8A0340 /* Pods-PrettyWeather-umbrella.h in Headers */,
+				A2E69A54BCA30476EFD046BF /* Pods-PrettyWeather-Cartography-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F090FFB82F871FD35B6361D5 /* Headers */ = {
+		BC9C8D207C4D2E04D86F23A2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E4C3018AA3977FBF7732F8 /* PWParallaxScrollView.h in Headers */,
-				23C2EC591F532B62F4FE17E9 /* Pods-PrettyWeather-PWParallaxScrollView-umbrella.h in Headers */,
+				DB62E0F141B9B16742959E50 /* Pods-PrettyWeather-Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F63F50C50FF421C1DCA694B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D0A94EA31AB522643345AEF /* FAKIcon.h in Headers */,
+				AC6199D27B86221C09F89228 /* Pods-PrettyWeather-WeatherIconsKit-umbrella.h in Headers */,
+				045030ACC2B006B8822FE9C6 /* WIKFontIcon.h in Headers */,
+				498C74F55AE079D067186065 /* WeatherIconsKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		137DC1604DCB7BC68F96325A /* Pods-PrettyWeather-SwiftyJSON */ = {
+		264D02175FA47220F0032BEB /* Pods-PrettyWeather-PWParallaxScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 745AE4FD1439F2F261C3DE5A /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-SwiftyJSON" */;
+			buildConfigurationList = E61E97D16F8C6989466792B9 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-PWParallaxScrollView" */;
 			buildPhases = (
-				77304EFECE8750D8CFB85303 /* Sources */,
-				ADA77D345927C8C9E0ABBE75 /* Frameworks */,
-				3198900F15CFF94425AB277D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-PrettyWeather-SwiftyJSON";
-			productName = "Pods-PrettyWeather-SwiftyJSON";
-			productReference = 4A409A08F40C198A803E815B /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8184A1CDEBAFF5068E8E5F6E /* Pods-PrettyWeather-Cartography */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71ABB30D77EDFD496DEA62D8 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Cartography" */;
-			buildPhases = (
-				9AAA5113B8F14AC03E859015 /* Sources */,
-				4C765D3A673D323D00E0BC07 /* Frameworks */,
-				270CC1F88706740E42021AA7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-PrettyWeather-Cartography";
-			productName = "Pods-PrettyWeather-Cartography";
-			productReference = 0BBD0085CB04A3841F2E6A42 /* Cartography.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A3876D48E48456B6966CF56C /* Pods-PrettyWeather */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4AA05BA6B56079019A73A576 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather" */;
-			buildPhases = (
-				FEE149759C7F49B280AE18E4 /* Sources */,
-				F7F72E37DD18783B4447ED18 /* Frameworks */,
-				B65C4E1B255E8754A5371CAD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A6A9C0C7084ECD483BB46EAF /* PBXTargetDependency */,
-				88154CF99C8184121EEA6B8F /* PBXTargetDependency */,
-				A8BB943DB6F98CB675E4BB53 /* PBXTargetDependency */,
-				BFF97C54B8E712F0FBD814A9 /* PBXTargetDependency */,
-			);
-			name = "Pods-PrettyWeather";
-			productName = "Pods-PrettyWeather";
-			productReference = 375DB31D5098B3C62C9B887E /* Pods_PrettyWeather.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AE8A84D820DEDD1A428D75DE /* Pods-PrettyWeather-PWParallaxScrollView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F24F8F685A9D4C78E7AB52D1 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-PWParallaxScrollView" */;
-			buildPhases = (
-				33747C208849EE3C8DE019F4 /* Sources */,
-				3842BCEDECAAA7756ED42345 /* Frameworks */,
-				F090FFB82F871FD35B6361D5 /* Headers */,
+				36B9245BBD4049E0C395D7F1 /* Sources */,
+				243935C89ABDAD845A1560B1 /* Frameworks */,
+				0A243863287BB02B04651B5E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -493,16 +534,33 @@
 			);
 			name = "Pods-PrettyWeather-PWParallaxScrollView";
 			productName = "Pods-PrettyWeather-PWParallaxScrollView";
-			productReference = D7ABBDA5CAE0AA0D12E9F6F1 /* PWParallaxScrollView.framework */;
+			productReference = 934F6A58CAC69274B0150F52 /* PWParallaxScrollView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E0D6EE98E112D02F40A334C2 /* Pods-PrettyWeather-Alamofire */ = {
+		269B249B78713E084E7A3668 /* Pods-PrettyWeather-SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B86F824CC00677F6860218A6 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Alamofire" */;
+			buildConfigurationList = A8A24F60C6F7A2F2F1512D50 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-SwiftyJSON" */;
 			buildPhases = (
-				2C0B23CA5BD81C35C15450B8 /* Sources */,
-				60033F5AE8750AFEF39E586F /* Frameworks */,
-				916A841CAB21D3664130F4B3 /* Headers */,
+				F09F22CE9AEECB632F5C919C /* Sources */,
+				922CDC96BDB55A5170E132CE /* Frameworks */,
+				B0E5A6C1C3A27DC8E85445C2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PrettyWeather-SwiftyJSON";
+			productName = "Pods-PrettyWeather-SwiftyJSON";
+			productReference = 64F92E7F3C3143E6C037C551 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		56C8DB86E6FBD0F56686FEB7 /* Pods-PrettyWeather-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28797CAFD2414F11F89E0FA /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Alamofire" */;
+			buildPhases = (
+				0253656A4F88F04544DA44FC /* Sources */,
+				B0CD94EBF2BF9DB49D2DF974 /* Frameworks */,
+				BC9C8D207C4D2E04D86F23A2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -510,129 +568,488 @@
 			);
 			name = "Pods-PrettyWeather-Alamofire";
 			productName = "Pods-PrettyWeather-Alamofire";
-			productReference = 850A63A1AE750631B05B81E4 /* Alamofire.framework */;
+			productReference = AB72296A01AF8F754DBFF839 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		58D1FDE94EA0AA6BF193AABD /* Pods-PrettyWeather-Cartography */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94C924BADCE04CDE85AF72B9 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Cartography" */;
+			buildPhases = (
+				D5102608C1180E43338E07F9 /* Sources */,
+				C38CA7E3E9D164C731CC89C8 /* Frameworks */,
+				B652EDCDBCD9B5A5495E39C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PrettyWeather-Cartography";
+			productName = "Pods-PrettyWeather-Cartography";
+			productReference = 04B74ECE274A98EF7654F2A1 /* Cartography.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBF8DCAFC848D28B9F13858D /* Pods-PrettyWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC19C12B082A92707B6A9C63 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather" */;
+			buildPhases = (
+				097D54CDAFA563BFB1E6FBEA /* Sources */,
+				B0E446FA343280FA4F52E75A /* Frameworks */,
+				A8E4EB7DFD90976D75E41E07 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0ED84AAB5B7FC233DF2BDE2 /* PBXTargetDependency */,
+				CE1063A45BECF56E22AAEDD0 /* PBXTargetDependency */,
+				BFB1465718527D4887B63BAB /* PBXTargetDependency */,
+				6FBFF36E74C380742B53964F /* PBXTargetDependency */,
+				083B53FF2BA4ED51BB759B9B /* PBXTargetDependency */,
+			);
+			name = "Pods-PrettyWeather";
+			productName = "Pods-PrettyWeather";
+			productReference = 317E54EA49D04C2E8D50B142 /* Pods_PrettyWeather.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D3F218DC9BD9EF4741FC0F4B /* Pods-PrettyWeather-WeatherIconsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56B1D91CEAB63E61FA0D2EA4 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-WeatherIconsKit" */;
+			buildPhases = (
+				2BE75C46C500F8F33F49A117 /* Sources */,
+				BE8BE0FBEC644B9407D3100B /* Frameworks */,
+				F63F50C50FF421C1DCA694B6 /* Headers */,
+				48FEF502B8CB3D1B700D78D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PrettyWeather-WeatherIconsKit";
+			productName = "Pods-PrettyWeather-WeatherIconsKit";
+			productReference = EC93E8152411F26AC61B6EF3 /* WeatherIconsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0B528482DFEDD5BBF1019694 /* Project object */ = {
+		DAEDAE93898B8DB381A8F8D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 13E428766F90CE26CEE37407 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = EEADF2458421359F6932D92A /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 621F17E6AE0B943145BF4B39;
-			productRefGroup = 26184EB4508A3E430FC50E1D /* Products */;
+			mainGroup = 080D28F21FC9C5A1A4A4FD95;
+			productRefGroup = 842974176D961A08B1844788 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3876D48E48456B6966CF56C /* Pods-PrettyWeather */,
-				E0D6EE98E112D02F40A334C2 /* Pods-PrettyWeather-Alamofire */,
-				8184A1CDEBAFF5068E8E5F6E /* Pods-PrettyWeather-Cartography */,
-				AE8A84D820DEDD1A428D75DE /* Pods-PrettyWeather-PWParallaxScrollView */,
-				137DC1604DCB7BC68F96325A /* Pods-PrettyWeather-SwiftyJSON */,
+				BBF8DCAFC848D28B9F13858D /* Pods-PrettyWeather */,
+				56C8DB86E6FBD0F56686FEB7 /* Pods-PrettyWeather-Alamofire */,
+				58D1FDE94EA0AA6BF193AABD /* Pods-PrettyWeather-Cartography */,
+				264D02175FA47220F0032BEB /* Pods-PrettyWeather-PWParallaxScrollView */,
+				269B249B78713E084E7A3668 /* Pods-PrettyWeather-SwiftyJSON */,
+				D3F218DC9BD9EF4741FC0F4B /* Pods-PrettyWeather-WeatherIconsKit */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		48FEF502B8CB3D1B700D78D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C10696D2E67CC5FB497711 /* WeatherIcons-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2C0B23CA5BD81C35C15450B8 /* Sources */ = {
+		0253656A4F88F04544DA44FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51E19159F117A9D9C6DB5A8 /* Alamofire.swift in Sources */,
-				59C0F5A2C59E73BF964F246E /* Pods-PrettyWeather-Alamofire-dummy.m in Sources */,
+				0F861AA48426F8C171B70450 /* Alamofire.swift in Sources */,
+				ABAEC9032D0E33B48D1F5E09 /* Pods-PrettyWeather-Alamofire-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33747C208849EE3C8DE019F4 /* Sources */ = {
+		097D54CDAFA563BFB1E6FBEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E66A1681208D82404B7DB79 /* PWParallaxScrollView.m in Sources */,
-				51652BBD8A50BF86CCCFF373 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m in Sources */,
+				B046E8FFB57AEE0F1508A50D /* Pods-PrettyWeather-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77304EFECE8750D8CFB85303 /* Sources */ = {
+		2BE75C46C500F8F33F49A117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7BEF4942327DF57AC317A19 /* Pods-PrettyWeather-SwiftyJSON-dummy.m in Sources */,
-				BB8B34A5A82C4A8F01218BAF /* SwiftyJSON.swift in Sources */,
+				46E2334D937EC9D674B44CEA /* FAKIcon.m in Sources */,
+				0C2DAE554ACBE95AFEDFA508 /* Pods-PrettyWeather-WeatherIconsKit-dummy.m in Sources */,
+				615C3FE8296C031ECC4D3B8A /* WIKFontIcon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AAA5113B8F14AC03E859015 /* Sources */ = {
+		36B9245BBD4049E0C395D7F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCAFF176419605AE01DC0774 /* Coefficients.swift in Sources */,
-				0D29CDEC1FA8A99EED1FFFD2 /* Compound.swift in Sources */,
-				68720FE1E040654C1EAE9372 /* Constraint.swift in Sources */,
-				3077671BE0F2F8010423D13B /* Context.swift in Sources */,
-				FA247A497849FA0E33D24C83 /* Dimension.swift in Sources */,
-				6A1D1D4B415FF894349E4398 /* Edge.swift in Sources */,
-				3D57FB1E17B314F50555F502 /* Edges.swift in Sources */,
-				540CBFB9F2825EC59DAA93F9 /* Expression.swift in Sources */,
-				301F5FC92668205844C73444 /* Layout.swift in Sources */,
-				46D56F92A3E118751933F7E5 /* LayoutProxy.swift in Sources */,
-				5A01E0976A8481824BAD8FD6 /* Pods-PrettyWeather-Cartography-dummy.m in Sources */,
-				603DE4AE1F311DA2A1A1603C /* Point.swift in Sources */,
-				C2FC3CFCCA9F2414DEB21282 /* Priority.swift in Sources */,
-				2B57F76AD0404244566FDDEB /* Property.swift in Sources */,
-				588CBAE54A5DAFD71ED2FCE0 /* Size.swift in Sources */,
-				03D116113A8CE3098E20165E /* View.swift in Sources */,
-				CF800A83BED62061BAA5328E /* ViewUtils.swift in Sources */,
+				E2FF5DA41A6331129A84C01F /* PWParallaxScrollView.m in Sources */,
+				ABDA3E9EB383FE3722B44F16 /* Pods-PrettyWeather-PWParallaxScrollView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEE149759C7F49B280AE18E4 /* Sources */ = {
+		D5102608C1180E43338E07F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F5405C644DDC6B6A87EFDD /* Pods-PrettyWeather-dummy.m in Sources */,
+				CAB0315EE61595CA89001718 /* Coefficients.swift in Sources */,
+				41C341383607C85C7DA9230C /* Compound.swift in Sources */,
+				EBFD372AAFD6E50FE6E06BFC /* Constraint.swift in Sources */,
+				276392614016B6C3D2B5E69D /* Context.swift in Sources */,
+				7CFD36D103FA00E43C6E1EDB /* Dimension.swift in Sources */,
+				A7180034428ECAFEDB20C0A0 /* Edge.swift in Sources */,
+				8CAE5EC23891B0CA99285832 /* Edges.swift in Sources */,
+				49B217E9E467FA07907D3E51 /* Expression.swift in Sources */,
+				0460A98ABF6DA51349618D97 /* Layout.swift in Sources */,
+				7AF394BF6F23AF7015759766 /* LayoutProxy.swift in Sources */,
+				69D615E22935ECC5F1E8BBF9 /* Pods-PrettyWeather-Cartography-dummy.m in Sources */,
+				D87D4B4A3118CA439D06DB75 /* Point.swift in Sources */,
+				839D088F194787A5AABF2AD9 /* Priority.swift in Sources */,
+				0CC35CDB1AB9F6D6DC113F6B /* Property.swift in Sources */,
+				1A2D5AB3474C41D95AA5A0EE /* Size.swift in Sources */,
+				19A5BC30495A77C87DE2A58E /* View.swift in Sources */,
+				30E2FFC49795028769610F48 /* ViewUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F09F22CE9AEECB632F5C919C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1C941BFE984AC23D740517 /* Pods-PrettyWeather-SwiftyJSON-dummy.m in Sources */,
+				ADA573CE67D0A57584CC488C /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		88154CF99C8184121EEA6B8F /* PBXTargetDependency */ = {
+		083B53FF2BA4ED51BB759B9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-PrettyWeather-Cartography";
-			target = 8184A1CDEBAFF5068E8E5F6E /* Pods-PrettyWeather-Cartography */;
-			targetProxy = BA3B5B5DE22BB1859C3AF312 /* PBXContainerItemProxy */;
+			name = "Pods-PrettyWeather-WeatherIconsKit";
+			target = D3F218DC9BD9EF4741FC0F4B /* Pods-PrettyWeather-WeatherIconsKit */;
+			targetProxy = 95C505F13CFACC04BCDEADA2 /* PBXContainerItemProxy */;
 		};
-		A6A9C0C7084ECD483BB46EAF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PrettyWeather-Alamofire";
-			target = E0D6EE98E112D02F40A334C2 /* Pods-PrettyWeather-Alamofire */;
-			targetProxy = 5C3FEBB5691E5D15AB5BE440 /* PBXContainerItemProxy */;
-		};
-		A8BB943DB6F98CB675E4BB53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PrettyWeather-PWParallaxScrollView";
-			target = AE8A84D820DEDD1A428D75DE /* Pods-PrettyWeather-PWParallaxScrollView */;
-			targetProxy = A08D090E067C5A0AE4ED02CB /* PBXContainerItemProxy */;
-		};
-		BFF97C54B8E712F0FBD814A9 /* PBXTargetDependency */ = {
+		6FBFF36E74C380742B53964F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PrettyWeather-SwiftyJSON";
-			target = 137DC1604DCB7BC68F96325A /* Pods-PrettyWeather-SwiftyJSON */;
-			targetProxy = 10FFCCEC640E8DF3ED961864 /* PBXContainerItemProxy */;
+			target = 269B249B78713E084E7A3668 /* Pods-PrettyWeather-SwiftyJSON */;
+			targetProxy = 33E64F60CF80E664BCA8D215 /* PBXContainerItemProxy */;
+		};
+		BFB1465718527D4887B63BAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PrettyWeather-PWParallaxScrollView";
+			target = 264D02175FA47220F0032BEB /* Pods-PrettyWeather-PWParallaxScrollView */;
+			targetProxy = 6439EE966559C32F72DE649B /* PBXContainerItemProxy */;
+		};
+		C0ED84AAB5B7FC233DF2BDE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PrettyWeather-Alamofire";
+			target = 56C8DB86E6FBD0F56686FEB7 /* Pods-PrettyWeather-Alamofire */;
+			targetProxy = 16CBD1BF1A8215E388A5FEFA /* PBXContainerItemProxy */;
+		};
+		CE1063A45BECF56E22AAEDD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PrettyWeather-Cartography";
+			target = 58D1FDE94EA0AA6BF193AABD /* Pods-PrettyWeather-Cartography */;
+			targetProxy = 850D1519F3AB6067FCE41805 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2A89DD4B60FF279FBA834BBE /* Release */ = {
+		123B2E48AC6FBE3ABFB26FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D60B2A152838DFAE4420A20 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		13B1467F3C31E508175A6044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3820537EF1603385A1F78F73 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36C0C982B816B7534DC8A3CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB237D9752FBAE93E7915376 /* Pods-PrettyWeather-Cartography-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Cartography/Pods-PrettyWeather-Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Cartography/Pods-PrettyWeather-Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43A30C3253DF69528E8AC274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E9F0F75DA464539B680CDF /* Pods-PrettyWeather-WeatherIconsKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Pods-PrettyWeather-WeatherIconsKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Pods-PrettyWeather-WeatherIconsKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = WeatherIconsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AE5FFE4A879C4A7BFE822F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F942EE4BA69D529D170F4BB /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PWParallaxScrollView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52DE152845C426DE7053F2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31762A81296EDB106FD31DDA /* Pods-PrettyWeather.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PrettyWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6062871A8BFBEA17196EC1F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F8A8F8FE4D2A20B9340CBE /* Pods-PrettyWeather.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PrettyWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64A17DEA9FBF62E77A8FB21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D60B2A152838DFAE4420A20 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		813F915071DB6B7406F46510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3820537EF1603385A1F78F73 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C3657C45748B349874659AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F942EE4BA69D529D170F4BB /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PWParallaxScrollView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9129B12659BF2C0EA5F5CE17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -665,9 +1082,9 @@
 			};
 			name = Release;
 		};
-		372017264E11F4F86CF16895 /* Debug */ = {
+		B25CF562906DD4B1C017FD86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A855FF5702A58FDF59968FA5 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = 33E9F0F75DA464539B680CDF /* Pods-PrettyWeather-WeatherIconsKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -676,14 +1093,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Pods-PrettyWeather-WeatherIconsKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-WeatherIconsKit/Pods-PrettyWeather-WeatherIconsKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
+				PRODUCT_NAME = WeatherIconsKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -692,9 +1109,9 @@
 			};
 			name = Debug;
 		};
-		6204C1213D77A93B12AD748A /* Release */ = {
+		D9A54832AED5AF88E1C30C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 896915C971F68BEEDB0802B1 /* Pods-PrettyWeather-Cartography-Private.xcconfig */;
+			baseConfigurationReference = AB237D9752FBAE93E7915376 /* Pods-PrettyWeather-Cartography-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -709,7 +1126,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Cartography/Pods-PrettyWeather-Cartography.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Cartography;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -717,38 +1134,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		84DCE33F264FBCA658DCE713 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F1D24400D587718C9999301 /* Pods-PrettyWeather.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PrettyWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8597A03B06AC8954C6D4C159 /* Debug */ = {
+		F7873E8D56F78F2259511518 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -786,255 +1174,73 @@
 			};
 			name = Debug;
 		};
-		88EF65AE428843AA8CED30B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 110D673697A9D56471D30094 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C7C4C5A0206289F4B8E91B02 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2352EE50240FDE1249FE838 /* Pods-PrettyWeather.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_PrettyWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CD0443DB6D68EC2BB268F445 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57DC08B4D64FF40123C7C96 /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PWParallaxScrollView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D349E76B67EBA448A4D7DF9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 110D673697A9D56471D30094 /* Pods-PrettyWeather-Alamofire-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Alamofire/Pods-PrettyWeather-Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E411DB0B46B4B7347044E44C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 896915C971F68BEEDB0802B1 /* Pods-PrettyWeather-Cartography-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-Cartography/Pods-PrettyWeather-Cartography-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-Cartography/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-Cartography/Pods-PrettyWeather-Cartography.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Cartography;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F4F68345A5A4914B6581FF49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57DC08B4D64FF40123C7C96 /* Pods-PrettyWeather-PWParallaxScrollView-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-PWParallaxScrollView/Pods-PrettyWeather-PWParallaxScrollView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PWParallaxScrollView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FA3F2DA2F54FBB9A589DD257 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A855FF5702A58FDF59968FA5 /* Pods-PrettyWeather-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-PrettyWeather-SwiftyJSON/Pods-PrettyWeather-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13E428766F90CE26CEE37407 /* Build configuration list for PBXProject "Pods" */ = {
+		56B1D91CEAB63E61FA0D2EA4 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-WeatherIconsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8597A03B06AC8954C6D4C159 /* Debug */,
-				2A89DD4B60FF279FBA834BBE /* Release */,
+				B25CF562906DD4B1C017FD86 /* Debug */,
+				43A30C3253DF69528E8AC274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4AA05BA6B56079019A73A576 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather" */ = {
+		94C924BADCE04CDE85AF72B9 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Cartography" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7C4C5A0206289F4B8E91B02 /* Debug */,
-				84DCE33F264FBCA658DCE713 /* Release */,
+				D9A54832AED5AF88E1C30C35 /* Debug */,
+				36C0C982B816B7534DC8A3CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71ABB30D77EDFD496DEA62D8 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Cartography" */ = {
+		A8A24F60C6F7A2F2F1512D50 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E411DB0B46B4B7347044E44C /* Debug */,
-				6204C1213D77A93B12AD748A /* Release */,
+				13B1467F3C31E508175A6044 /* Debug */,
+				813F915071DB6B7406F46510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		745AE4FD1439F2F261C3DE5A /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-SwiftyJSON" */ = {
+		E28797CAFD2414F11F89E0FA /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				372017264E11F4F86CF16895 /* Debug */,
-				FA3F2DA2F54FBB9A589DD257 /* Release */,
+				64A17DEA9FBF62E77A8FB21A /* Debug */,
+				123B2E48AC6FBE3ABFB26FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B86F824CC00677F6860218A6 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-Alamofire" */ = {
+		E61E97D16F8C6989466792B9 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-PWParallaxScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D349E76B67EBA448A4D7DF9D /* Debug */,
-				88EF65AE428843AA8CED30B7 /* Release */,
+				4AE5FFE4A879C4A7BFE822F5 /* Debug */,
+				8C3657C45748B349874659AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F24F8F685A9D4C78E7AB52D1 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather-PWParallaxScrollView" */ = {
+		EC19C12B082A92707B6A9C63 /* Build configuration list for PBXNativeTarget "Pods-PrettyWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD0443DB6D68EC2BB268F445 /* Debug */,
-				F4F68345A5A4914B6581FF49 /* Release */,
+				52DE152845C426DE7053F2DA /* Debug */,
+				6062871A8BFBEA17196EC1F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEADF2458421359F6932D92A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7873E8D56F78F2259511518 /* Debug */,
+				9129B12659BF2C0EA5F5CE17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0B528482DFEDD5BBF1019694 /* Project object */;
+	rootObject = DAEDAE93898B8DB381A8F8D2 /* Project object */;
 }

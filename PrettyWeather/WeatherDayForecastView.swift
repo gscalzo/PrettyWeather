@@ -8,10 +8,11 @@
 
 import Foundation
 import Cartography
+import WeatherIconsKit
 
 class WeatherDayForecastView: UIView {
     private var didSetupConstraints = false
-    private let tempLabel = UILabel()
+    private let iconLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +30,7 @@ class WeatherDayForecastView: UIView {
 // MARK: Setup
 private extension WeatherDayForecastView{
     func setup(){
-        addSubview(tempLabel)
+        addSubview(iconLabel)
     }
 }
 
@@ -39,7 +40,7 @@ extension WeatherDayForecastView{
         if didSetupConstraints == false {
             super.updateConstraints()
         }
-        layout(tempLabel) { view in
+        layout(iconLabel) { view in
             view.center == view.superview!.center
             return
         }
@@ -52,7 +53,6 @@ extension WeatherDayForecastView{
 private extension WeatherDayForecastView{
     func style(){
         backgroundColor = UIColor.yellowColor()
-        tempLabel.font = UIFont.boldSystemFontOfSize(30)
-        tempLabel.text = "10°"
+        iconLabel.attributedText = WIKFontIcon.wiDayCloudyGustsIconWithSize(30).attributedString()
     }
 }

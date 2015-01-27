@@ -30,3 +30,9 @@
 #define COCOAPODS_VERSION_MINOR_SwiftyJSON 1
 #define COCOAPODS_VERSION_PATCH_SwiftyJSON 3
 
+// WeatherIconsKit
+#define COCOAPODS_POD_AVAILABLE_WeatherIconsKit
+#define COCOAPODS_VERSION_MAJOR_WeatherIconsKit 1
+#define COCOAPODS_VERSION_MINOR_WeatherIconsKit 0
+#define COCOAPODS_VERSION_PATCH_WeatherIconsKit 0
+

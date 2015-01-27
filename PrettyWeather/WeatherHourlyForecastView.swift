@@ -91,9 +91,5 @@ extension WeatherHourlyForecastView{
 private extension WeatherHourlyForecastView{
     func style(){
         backgroundColor = UIColor.blueColor()
-//        scrollView.backgroundColor = UIColor.redColor()
-        for cell in forecastCells {
-            cell.backgroundColor = UIColor.yellowColor()
-        }
     }
 }
