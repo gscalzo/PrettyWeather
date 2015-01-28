@@ -10,6 +10,8 @@ import UIKit
 import Cartography
 
 class PrettyWeatherViewController: UIViewController {
+    private let backgroundView = UIImageView()
+    private let overlayView = UIImageView()
     private let scrollView = UIScrollView()
     private let resumeView = WeatherResumeView(frame: CGRectZero)
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
@@ -20,6 +22,10 @@ class PrettyWeatherViewController: UIViewController {
         setup()
         layoutView()
         style()
+        render()
+        FlickrDatastore().callflickr(){ image in
+            self.backgroundView.image = image
+        }
         WeatherDatastore().updateForecast(51.5072, longitude: 0.1275) {
             weatherConditions in
             println(weatherConditions)
@@ -31,7 +37,13 @@ class PrettyWeatherViewController: UIViewController {
 // MARK: Setup
 private extension PrettyWeatherViewController{
     func setup(){
-        view.backgroundColor = UIColor.grayColor()
+        backgroundView.contentMode = .ScaleAspectFill
+        backgroundView.clipsToBounds = true
+        view.addSubview(backgroundView)
+        
+        overlayView.contentMode = .ScaleAspectFill
+        overlayView.clipsToBounds = true
+        view.addSubview(overlayView)
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(resumeView)
         scrollView.addSubview(hourlyForecastView)
@@ -43,6 +55,13 @@ private extension PrettyWeatherViewController{
 // MARK: Layout
 extension PrettyWeatherViewController{
     func layoutView() {
+        layout(backgroundView) { view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
+        
         layout(scrollView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
@@ -81,5 +100,12 @@ private extension PrettyWeatherViewController{
     func style(){
         view.backgroundColor = UIColor.grayColor()
         daysForecastView.backgroundColor = UIColor.redColor()
+    }
+}
+
+// MARK: Render
+private extension PrettyWeatherViewController{
+    func render(){
+        backgroundView.image = UIImage(named: "StockPhoto")
     }
 }

@@ -7,6 +7,7 @@ target 'PrettyWeather' do
 	pod 'Alamofire', '~> 1.1.3'
 	pod 'SwiftyJSON', '~> 2.1.3'
 	pod 'WeatherIconsKit', :git => 'git@github.com:gscalzo/WeatherIconsKit.git'
+	pod 'FlickrKit', '~> 1.0.4'
 #	pod 'Reveal-iOS-SDK', '~> 1.0.7'
 end
 

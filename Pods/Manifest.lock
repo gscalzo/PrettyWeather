@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (1.1.3)
   - Cartography (0.1.1)
+  - FlickrKit (1.0.4)
   - PWParallaxScrollView (1.1.5)
   - SwiftyJSON (2.1.3)
   - WeatherIconsKit (1.0.0)
@@ -8,6 +9,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 1.1.3)
   - Cartography (~> 0.1)
+  - FlickrKit (~> 1.0.4)
   - PWParallaxScrollView (~> 1.1.5)
   - SwiftyJSON (~> 2.1.3)
   - WeatherIconsKit (from `git@github.com:gscalzo/WeatherIconsKit.git`)
@@ -24,6 +26,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 4337b1484a062640f8caf6e96f03a511bf137536
   Cartography: e625895e543d2316c782486c3970b30be4271391
+  FlickrKit: 1bbc5c91f065fa0d7ce4119c5d5c63a9241eea73
   PWParallaxScrollView: bf7b67a37a4afc52ff22c2e627a1438a388beba3
   SwiftyJSON: 48be7490a3989a58a3f511cd54167f0a2b466e76
   WeatherIconsKit: 84526a4cdf9da972c2866f24e40360420b1d40bf

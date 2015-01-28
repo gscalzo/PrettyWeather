@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_Cartography 1
 #define COCOAPODS_VERSION_PATCH_Cartography 1
 
+// FlickrKit
+#define COCOAPODS_POD_AVAILABLE_FlickrKit
+#define COCOAPODS_VERSION_MAJOR_FlickrKit 1
+#define COCOAPODS_VERSION_MINOR_FlickrKit 0
+#define COCOAPODS_VERSION_PATCH_FlickrKit 4
+
 // PWParallaxScrollView
 #define COCOAPODS_POD_AVAILABLE_PWParallaxScrollView
 #define COCOAPODS_VERSION_MAJOR_PWParallaxScrollView 1
