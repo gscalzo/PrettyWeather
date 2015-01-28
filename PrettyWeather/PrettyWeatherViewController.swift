@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import FXBlurView
 
 class PrettyWeatherViewController: UIViewController {
     private let backgroundView = UIImageView()
@@ -25,6 +26,8 @@ class PrettyWeatherViewController: UIViewController {
         render()
         FlickrDatastore().callflickr(){ image in
             self.backgroundView.image = image
+            self.overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+            self.overlayView.alpha = 0
         }
         WeatherDatastore().updateForecast(51.5072, longitude: 0.1275) {
             weatherConditions in
@@ -44,10 +47,12 @@ private extension PrettyWeatherViewController{
         overlayView.contentMode = .ScaleAspectFill
         overlayView.clipsToBounds = true
         view.addSubview(overlayView)
+        
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(resumeView)
         scrollView.addSubview(hourlyForecastView)
         scrollView.addSubview(daysForecastView)
+        scrollView.delegate = self
         view.addSubview(scrollView)
     }
 }
@@ -56,6 +61,12 @@ private extension PrettyWeatherViewController{
 extension PrettyWeatherViewController{
     func layoutView() {
         layout(backgroundView) { view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
+        layout(overlayView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
@@ -107,5 +118,20 @@ private extension PrettyWeatherViewController{
 private extension PrettyWeatherViewController{
     func render(){
         backgroundView.image = UIImage(named: "StockPhoto")
+    }
+}
+
+// MARK: UIScrollViewDelegate
+extension PrettyWeatherViewController: UIScrollViewDelegate{
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        println(offset)
+        println(scrollView.contentSize.height)
+        let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
+        println(resumeToInsect)
+        // ?????? come si calcola sto numero???????
+        let magicNumer: CGFloat = CGFloat(resumeToInsect)
+        overlayView.alpha = min (1.0, offset/magicNumer)
+
     }
 }

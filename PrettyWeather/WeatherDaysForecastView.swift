@@ -50,8 +50,7 @@ extension WeatherDaysForecastView{
 // MARK: Style
 private extension WeatherDaysForecastView{
     func style(){
-        backgroundColor = UIColor.blueColor()
-        
-    backgroundColor = UIColor.redColor()
+        backgroundColor = UIColor.redColor()
+        alpha = 0.4
     }
 }
