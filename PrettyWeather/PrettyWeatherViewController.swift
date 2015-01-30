@@ -14,7 +14,7 @@ class PrettyWeatherViewController: UIViewController {
     private let backgroundView = UIImageView()
     private let overlayView = UIImageView()
     private let scrollView = UIScrollView()
-    private let resumeView = WeatherResumeView(frame: CGRectZero)
+    private let resumeView = CurrentWeatherView(frame: CGRectZero)
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
     private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
     private var locationDatastore: LocationDatastore?
@@ -186,3 +186,6 @@ extension PrettyWeatherViewController: UIScrollViewDelegate{
     }
 }
 
+// MARK: Render
+private extension PrettyWeatherViewController{
+}

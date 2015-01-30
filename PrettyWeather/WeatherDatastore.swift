@@ -17,32 +17,13 @@ class WeatherDatastore {
         block: (weatherCondition: WeatherCondition) -> Void) {
             let url = "http://api.openweathermap.org/data/2.5/weather"
             let params = ["lat":lat, "lon":lon]
-            println(params)
-            
+
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
                         println("Error: \(error)")
                     } else {
                         let json = JSON(json!)
-                        NSLog("\(json)")
-                        NSLog("flush")
-//
-//                        let name = json["name"].string
-//                        let weather = json["weather"][0]["main"].stringValue
-//                        let icon = json["weather"][0]["icon"].stringValue
-//                        let dt = json["dt"].doubleValue
-//                        let time = NSDate(timeIntervalSince1970: dt)
-//                        let maxTempKelvin = json["main"]["temp_max"].doubleValue
-//                        let minTempKelvin = json["main"]["temp_min"].doubleValue
-//                        
-//                        let currentWeatherCondition = WeatherCondition(
-//                            cityName: name,
-//                            weather: weather,
-//                            icon: IconType(rawValue: icon),
-//                            time: time,
-//                            maxTempKelvin: maxTempKelvin,
-//                            minTempKelvin: minTempKelvin)
                         block(weatherCondition: self.createWeatherConditionFronJson(json))
                     }
             }
@@ -53,8 +34,6 @@ class WeatherDatastore {
         block: (weatherConditions: Array<WeatherCondition>) -> Void) {
             let url = "http://api.openweathermap.org/data/2.5/forecast"
             let params = ["lat":lat, "lon":lon]
-            println(params)
-            
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
@@ -78,8 +57,6 @@ class WeatherDatastore {
         block: (weatherConditions: Array<WeatherCondition>) -> Void) {
             let url = "http://api.openweathermap.org/data/2.5/forecast/daily"
             let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt)]
-            println(params)
-            
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
@@ -105,6 +82,7 @@ private extension WeatherDatastore {
         let icon = json["weather"][0]["icon"].stringValue
         let dt = json["dt"].doubleValue
         let time = NSDate(timeIntervalSince1970: dt)
+        let tempKelvin = json["main"]["temp"].doubleValue
         let maxTempKelvin = json["main"]["temp_max"].doubleValue
         let minTempKelvin = json["main"]["temp_min"].doubleValue
         
@@ -113,6 +91,7 @@ private extension WeatherDatastore {
             weather: weather,
             icon: IconType(rawValue: icon),
             time: time,
+            tempKelvin: tempKelvin,
             maxTempKelvin: maxTempKelvin,
             minTempKelvin: minTempKelvin)
     }

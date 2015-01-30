@@ -34,9 +34,16 @@ struct WeatherCondition {
     let weather: String
     let icon: IconType?
     let time: NSDate
+    let tempKelvin: Double
     let maxTempKelvin: Double
     let minTempKelvin: Double
 
+    var tempFahrenheit: Double {
+        get {
+            return tempCelsius * 9.0/5.0 + 32.0
+        }
+    }
+    
     var maxTempFahrenheit: Double {
         get {
             return maxTempCelsius * 9.0/5.0 + 32.0
@@ -48,6 +55,11 @@ struct WeatherCondition {
         }
     }
     
+    var tempCelsius: Double {
+        get {
+            return tempKelvin - 273.15
+        }
+    }
     var maxTempCelsius: Double {
         get {
             return maxTempKelvin - 273.15
