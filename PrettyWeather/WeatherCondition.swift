@@ -9,51 +9,51 @@
 import Foundation
 
 enum IconType: String {
-    case i01d = "01d.png"
-    case i01n = "01n.png"
-    case i02d = "02d.png"
-    case i02n = "02n.png"
-    case i03d = "03d.png"
-    case i03n = "03n.png"
-    case i04d = "04d.png"
-    case i04n = "04n.png"
-    case i09d = "09d.png"
-    case i09n = "09n.png"
-    case i10d = "10d.png"
-    case i10n = "10n.png"
-    case i11d = "11d.png"
-    case i11n = "11n.png"
-    case i13d = "13d.png"
-    case i13n = "13n.png"
-    case i50d = "50d.png"
-    case i50n = "50n.png"
+    case i01d = "01d"
+    case i01n = "01n"
+    case i02d = "02d"
+    case i02n = "02n"
+    case i03d = "03d"
+    case i03n = "03n"
+    case i04d = "04d"
+    case i04n = "04n"
+    case i09d = "09d"
+    case i09n = "09n"
+    case i10d = "10d"
+    case i10n = "10n"
+    case i11d = "11d"
+    case i11n = "11n"
+    case i13d = "13d"
+    case i13n = "13n"
+    case i50d = "50d"
+    case i50n = "50n"
 }
 
 struct WeatherCondition {
     let cityName: String?
     let weather: String
-    let icon: IconType
+    let icon: IconType?
     let time: NSDate
-    let maxTempKelvin: Float
-    let minTempKelvin: Float
+    let maxTempKelvin: Double
+    let minTempKelvin: Double
 
-    var maxTempFahrenheit: Float {
+    var maxTempFahrenheit: Double {
         get {
             return maxTempCelsius * 9.0/5.0 + 32.0
         }
     }
-    var minTempFahrenheit: Float {
+    var minTempFahrenheit: Double {
         get {
             return minTempKelvin * 9.0/5.0 + 32.0
         }
     }
     
-    var maxTempCelsius: Float {
+    var maxTempCelsius: Double {
         get {
             return maxTempKelvin - 273.15
         }
     }
-    var minTempCelsius: Float {
+    var minTempCelsius: Double {
         get {
             return minTempKelvin - 273.15
         }

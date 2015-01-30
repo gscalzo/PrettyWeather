@@ -13,7 +13,7 @@ class FlickrDatastore {
     private let OBJECTIVE_FLICKR_API_KEY = "dd23a324bf96f064fc8960799637a0e9"
     private let OBJECTIVE_FLICKR_API_SHARED_SECRET = "53ac95957294758f"
     
-    func retrieveImageAtLat(lat: Double, lon: Double, closure: (image: UIImage) -> Void){
+    func retrieveImageAtLat(lat: Double, lon: Double, closure: (image: UIImage?) -> Void){
         let fk = FlickrKit.sharedFlickrKit()
         fk.initializeWithAPIKey(OBJECTIVE_FLICKR_API_KEY, sharedSecret: OBJECTIVE_FLICKR_API_SHARED_SECRET)
         

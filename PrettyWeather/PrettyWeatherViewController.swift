@@ -24,22 +24,27 @@ class PrettyWeatherViewController: UIViewController {
         setup()
         layoutView()
         style()
-        render()
+        render(UIImage(named: "StockPhoto"))
         locationDatastore = LocationDatastore() { [weak self] location in
             FlickrDatastore().retrieveImageAtLat(location.lat, lon: location.lon){ image in
-                self?.backgroundView.image = image
-                self?.overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
-                self?.overlayView.alpha = 0
+                self?.render(image)
+                return
             }
             let weatherDatastore = WeatherDatastore()
             weatherDatastore.retrieveCurrentWeatherAtLat(location.lat, lon: location.lon) {
                 currentWeatherConditions in
+                self?.renderCurrent(currentWeatherConditions)
+                return
             }
             weatherDatastore.retrieveHourlyForecastAtLat(location.lat, lon: location.lon) {
                 hourlyWeatherConditions in
+                self?.renderHourly(hourlyWeatherConditions)
+                return
             }
             weatherDatastore.retrieveDailyForecastAtLat(location.lat, lon: location.lon, dayCnt: 7) {
                 hourlyWeatherConditions in
+                self?.renderHourly(hourlyWeatherConditions)
+                return
             }
         }
     }
@@ -125,8 +130,49 @@ private extension PrettyWeatherViewController{
 
 // MARK: Render
 private extension PrettyWeatherViewController{
-    func render(){
-        backgroundView.image = UIImage(named: "StockPhoto")
+    func render(image: UIImage?){
+        if let image = image {
+            backgroundView.image = image
+            overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+            overlayView.alpha = 0
+        }
+    }
+    
+    func renderCurrent(currentWeatherConditions: WeatherCondition){
+        NSLog("\(currentWeatherConditions.cityName)")
+        NSLog("\(currentWeatherConditions.weather)")
+        NSLog("\(currentWeatherConditions.time)")
+        NSLog("\(currentWeatherConditions.maxTempKelvin)")
+        NSLog("\(currentWeatherConditions.minTempKelvin)")
+        NSLog("\(currentWeatherConditions.maxTempCelsius)")
+        NSLog("\(currentWeatherConditions.minTempCelsius)")
+        NSLog("Flush")
+    }
+    func renderHourly(weatherConditions: Array<WeatherCondition>){
+        for currentWeatherConditions in weatherConditions {
+            NSLog("\(currentWeatherConditions.cityName)")
+            NSLog("\(currentWeatherConditions.weather)")
+            NSLog("\(currentWeatherConditions.time)")
+            NSLog("\(currentWeatherConditions.maxTempKelvin)")
+            NSLog("\(currentWeatherConditions.minTempKelvin)")
+            NSLog("\(currentWeatherConditions.maxTempCelsius)")
+            NSLog("\(currentWeatherConditions.minTempCelsius)")
+            NSLog("Flush")
+        }
+    }
+    
+    
+    func renderDaily(weatherConditions: Array<WeatherCondition>){
+        for currentWeatherConditions in weatherConditions {
+            NSLog("\(currentWeatherConditions.cityName)")
+            NSLog("\(currentWeatherConditions.weather)")
+            NSLog("\(currentWeatherConditions.time)")
+            NSLog("\(currentWeatherConditions.maxTempKelvin)")
+            NSLog("\(currentWeatherConditions.minTempKelvin)")
+            NSLog("\(currentWeatherConditions.maxTempCelsius)")
+            NSLog("\(currentWeatherConditions.minTempCelsius)")
+            NSLog("Flush")
+        }
     }
 }
 
@@ -134,14 +180,9 @@ private extension PrettyWeatherViewController{
 extension PrettyWeatherViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
-        //        println(offset)
-        //        println(scrollView.contentSize.height)
-        let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
-        //        println(resumeToInsect)
-        // ?????? come si calcola sto numero???????
-        // mettiamo metà schermo?
         let magicNumer: CGFloat = CGFloat(view.frame.height)/2
         overlayView.alpha = min (1.0, offset/magicNumer)
         
     }
 }
+

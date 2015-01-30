@@ -14,7 +14,7 @@ import SwiftyJSON
 class WeatherDatastore {
     
     func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
-        block: (weatherConditions: WeatherCondition) -> Void) {
+        block: (weatherCondition: WeatherCondition) -> Void) {
             let url = "http://api.openweathermap.org/data/2.5/weather"
             let params = ["lat":lat, "lon":lon]
             println(params)
@@ -23,20 +23,31 @@ class WeatherDatastore {
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
                         println("Error: \(error)")
-                        println(request)
-                        println(response)
-//                        self.loading.text = "Internet appears down!"
-                    }
-                    else {
-                        println("Success: \(url)")
-                        println(json)
-                        var json = JSON(json!)
-                        println(json)
-//                        self.updateUISuccess(json)
+                    } else {
+                        let json = JSON(json!)
+                        NSLog("\(json)")
+                        NSLog("flush")
+//
+//                        let name = json["name"].string
+//                        let weather = json["weather"][0]["main"].stringValue
+//                        let icon = json["weather"][0]["icon"].stringValue
+//                        let dt = json["dt"].doubleValue
+//                        let time = NSDate(timeIntervalSince1970: dt)
+//                        let maxTempKelvin = json["main"]["temp_max"].doubleValue
+//                        let minTempKelvin = json["main"]["temp_min"].doubleValue
+//                        
+//                        let currentWeatherCondition = WeatherCondition(
+//                            cityName: name,
+//                            weather: weather,
+//                            icon: IconType(rawValue: icon),
+//                            time: time,
+//                            maxTempKelvin: maxTempKelvin,
+//                            minTempKelvin: minTempKelvin)
+                        block(weatherCondition: self.createWeatherConditionFronJson(json))
                     }
             }
     }
-
+    
     func retrieveHourlyForecastAtLat(lat: CLLocationDegrees,
         lon: CLLocationDegrees,
         block: (weatherConditions: Array<WeatherCondition>) -> Void) {
@@ -48,16 +59,15 @@ class WeatherDatastore {
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
                         println("Error: \(error)")
-                        println(request)
-                        println(response)
-                        //                        self.loading.text = "Internet appears down!"
                     }
                     else {
-                        println("Success: \(url)")
-                        println(json)
-                        var json = JSON(json!)
-                        println(json)
-                        //                        self.updateUISuccess(json)
+                        let json = JSON(json!)
+                        let list: Array<JSON> = json["list"].arrayValue
+                        
+                        let weatherConditions: Array<WeatherCondition> = list.map() {
+                            return self.createWeatherConditionFronJson($0)
+                        }
+                        block(weatherConditions: weatherConditions)
                     }
             }
     }
@@ -74,18 +84,36 @@ class WeatherDatastore {
                 .responseJSON { (request, response, json, error) in
                     if(error != nil && json != nil) {
                         println("Error: \(error)")
-                        println(request)
-                        println(response)
-                        //                        self.loading.text = "Internet appears down!"
-                    }
-                    else {
-                        println("Success: \(url)")
-                        println(json)
+                    } else {
                         var json = JSON(json!)
-                        println(json)
-                        //                        self.updateUISuccess(json)
+                        let list: Array<JSON> = json["list"].arrayValue
+                        
+                        let weatherConditions: Array<WeatherCondition> = list.map() {
+                            return self.createWeatherConditionFronJson($0)
+                        }
+                        block(weatherConditions: weatherConditions)
                     }
             }
     }
     
+}
+
+private extension WeatherDatastore {
+    func createWeatherConditionFronJson(json: JSON) -> WeatherCondition{
+        let name = json["name"].string
+        let weather = json["weather"][0]["main"].stringValue
+        let icon = json["weather"][0]["icon"].stringValue
+        let dt = json["dt"].doubleValue
+        let time = NSDate(timeIntervalSince1970: dt)
+        let maxTempKelvin = json["main"]["temp_max"].doubleValue
+        let minTempKelvin = json["main"]["temp_min"].doubleValue
+        
+        return WeatherCondition(
+            cityName: name,
+            weather: weather,
+            icon: IconType(rawValue: icon),
+            time: time,
+            maxTempKelvin: maxTempKelvin,
+            minTempKelvin: minTempKelvin)
+    }
 }
