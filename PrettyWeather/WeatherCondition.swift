@@ -51,7 +51,7 @@ struct WeatherCondition {
     }
     var minTempFahrenheit: Double {
         get {
-            return minTempKelvin * 9.0/5.0 + 32.0
+            return minTempCelsius * 9.0/5.0 + 32.0
         }
     }
     

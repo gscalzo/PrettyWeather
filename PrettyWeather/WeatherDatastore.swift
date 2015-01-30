@@ -20,7 +20,8 @@ class WeatherDatastore {
 
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
-                    if(error != nil && json != nil) {
+                    println(response)
+                    if(error != nil || json == nil) {
                         println("Error: \(error)")
                     } else {
                         let json = JSON(json!)
@@ -36,7 +37,7 @@ class WeatherDatastore {
             let params = ["lat":lat, "lon":lon]
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
-                    if(error != nil && json != nil) {
+                    if(error != nil || json == nil) {
                         println("Error: \(error)")
                     }
                     else {
@@ -59,7 +60,7 @@ class WeatherDatastore {
             let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt)]
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
-                    if(error != nil && json != nil) {
+                    if(error != nil || json == nil) {
                         println("Error: \(error)")
                     } else {
                         var json = JSON(json!)

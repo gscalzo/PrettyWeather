@@ -8,7 +8,7 @@
 
 import UIKit
 import Cartography
-
+import LatoFont
 
 class CurrentWeatherView: UIView {
     private let cityLbl = UILabel()
@@ -70,12 +70,7 @@ private extension CurrentWeatherView{
             view.height == view2.height
             view.width == 200
         }
-        
-        layout(currentTempLbl) { view in
-            view.width == view.height
-            return
-        }
-        
+     
         layout(currentTempLbl, iconLbl) { view, view2 in
             view.top == view2.bottom
             view.left == view2.left
@@ -89,20 +84,13 @@ private extension CurrentWeatherView{
         layout(minTempLbl) { view in
             view.bottom == view.superview!.bottom
             view.height == 30
-            view.width == 40
         }
         
         layout(maxTempLbl, minTempLbl) { view, view2 in
             view.top == view2.top
             view.height == view2.height
-            view.width == view2.width
+            view.left == view2.right + 10
         }
-    
-        layout(maxTempLbl, currentTempLbl) { view, view2 in
-            view.right == view2.right
-            return
-        }
-
         layout(cityLbl) { view in
             view.bottom == view.superview!.bottom
             view.right == view.superview!.right - 10
@@ -116,25 +104,53 @@ private extension CurrentWeatherView{
 // MARK: Style
 private extension CurrentWeatherView{
     func style(){
-        backgroundColor = UIColor.greenColor()
-        iconLbl.backgroundColor = UIColor.brownColor()
-        weatherLbl.backgroundColor = UIColor.brownColor()
-        minTempLbl.backgroundColor = UIColor.brownColor()
-        maxTempLbl.backgroundColor = UIColor.brownColor()
-        currentTempLbl.backgroundColor = UIColor.redColor()
-        cityLbl.backgroundColor = UIColor.redColor()
+//        backgroundColor = UIColor.greenColor()
+//        iconLbl.backgroundColor = UIColor.brownColor()
+//        weatherLbl.backgroundColor = UIColor.brownColor()
+//        minTempLbl.backgroundColor = UIColor.brownColor()
+//        maxTempLbl.backgroundColor = UIColor.brownColor()
+//        currentTempLbl.backgroundColor = UIColor.redColor()
+//        cityLbl.backgroundColor = UIColor.redColor()
+        
+        weatherLbl.font = UIFont.latoLightFontOfSize(20)
+        weatherLbl.textColor = UIColor.whiteColor()
+        
+        currentTempLbl.font = UIFont.latoLightFontOfSize(96)
+        currentTempLbl.textColor = UIColor.whiteColor()
+        
+        maxTempLbl.font = UIFont.latoLightFontOfSize(18)
+        maxTempLbl.textColor = UIColor.whiteColor()
+        
+        minTempLbl.font = UIFont.latoLightFontOfSize(18)
+        minTempLbl.textColor = UIColor.whiteColor()
+        
+        cityLbl.font = UIFont.latoLightFontOfSize(18)
+        cityLbl.textColor = UIColor.whiteColor()
+        cityLbl.textAlignment = .Right
     }
 }
 
 // MARK: Render
 extension CurrentWeatherView{
     func render(weatherCondition: WeatherCondition){
-//        iconLbl.backgroundColor = UIColor.brownColor()
-        
         weatherLbl.text = weatherCondition.weather
-        minTempLbl.text = "\(Int(round(weatherCondition.minTempCelsius)))°"
-        maxTempLbl.text = "\(Int(round(weatherCondition.maxTempCelsius)))°"
-        currentTempLbl.text = "\(Int(round(weatherCondition.tempCelsius)))°"
+        
+        var usesMetric = false
+
+        if let localeSystem = NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
+            usesMetric = localeSystem
+        }
+        
+        if usesMetric {
+            minTempLbl.text = "\(weatherCondition.minTempCelsius.roundToInt())°"
+            maxTempLbl.text = "\(weatherCondition.maxTempCelsius.roundToInt())°"
+            currentTempLbl.text = "\(weatherCondition.tempCelsius.roundToInt())°"
+        } else {
+            minTempLbl.text = "\(weatherCondition.minTempFahrenheit.roundToInt())°"
+            maxTempLbl.text = "\(weatherCondition.maxTempFahrenheit.roundToInt())°"
+            currentTempLbl.text = "\(weatherCondition.tempFahrenheit.roundToInt())°"
+        }
+        
         cityLbl.text = weatherCondition.cityName ?? ""
     }
 }

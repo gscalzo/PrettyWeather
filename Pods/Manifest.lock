@@ -3,6 +3,7 @@ PODS:
   - Cartography (0.1.1)
   - FlickrKit (1.0.4)
   - FXBlurView (1.6.3)
+  - LatoFont (1.0.1)
   - PWParallaxScrollView (1.1.5)
   - SwiftyJSON (2.1.3)
   - WeatherIconsKit (1.0.0)
@@ -12,15 +13,21 @@ DEPENDENCIES:
   - Cartography (~> 0.1)
   - FlickrKit (~> 1.0.4)
   - FXBlurView (~> 1.6.3)
+  - LatoFont (from `https://github.com/gscalzo/LatoFont.git`)
   - PWParallaxScrollView (~> 1.1.5)
   - SwiftyJSON (~> 2.1.3)
   - WeatherIconsKit (from `git@github.com:gscalzo/WeatherIconsKit.git`)
 
 EXTERNAL SOURCES:
+  LatoFont:
+    :git: https://github.com/gscalzo/LatoFont.git
   WeatherIconsKit:
     :git: git@github.com:gscalzo/WeatherIconsKit.git
 
 CHECKOUT OPTIONS:
+  LatoFont:
+    :commit: 2739e4c28c92c82ca2c7daf289a238d62af01c42
+    :git: https://github.com/gscalzo/LatoFont.git
   WeatherIconsKit:
     :commit: effa8476b88010a5ea6d3cfcf5fb81db87ff5bfa
     :git: git@github.com:gscalzo/WeatherIconsKit.git
@@ -30,6 +37,7 @@ SPEC CHECKSUMS:
   Cartography: e625895e543d2316c782486c3970b30be4271391
   FlickrKit: 1bbc5c91f065fa0d7ce4119c5d5c63a9241eea73
   FXBlurView: abe1046285813c4f6e9008abbc324fc5ab32af90
+  LatoFont: 0bfeace154ee2da6080123d0e80560f6e22b187d
   PWParallaxScrollView: bf7b67a37a4afc52ff22c2e627a1438a388beba3
   SwiftyJSON: 48be7490a3989a58a3f511cd54167f0a2b466e76
   WeatherIconsKit: 84526a4cdf9da972c2866f24e40360420b1d40bf

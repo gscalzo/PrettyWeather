@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC9D51E1AF3BBC55DE5D3B0C /* Pods_PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593BBA8CA7641638EF550D51 /* Pods_PrettyWeather.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE06F0351A7C4114000A5974 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06F0341A7C4114000A5974 /* Double+Extension.swift */; };
 		EE0D979B1A75A869009D8A2A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97951A75A869009D8A2A /* 1.jpg */; };
 		EE0D979C1A75A869009D8A2A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97961A75A869009D8A2A /* 2.jpg */; };
 		EE0D979D1A75A869009D8A2A /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE0D97971A75A869009D8A2A /* 3.jpg */; };
@@ -44,6 +45,7 @@
 		1172AA04AE84755B17DBEF3F /* Pods-PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		593BBA8CA7641638EF550D51 /* Pods_PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54F60D0D30AA64299F1D06C /* Pods-PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
+		EE06F0341A7C4114000A5974 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		EE0D97951A75A869009D8A2A /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		EE0D97961A75A869009D8A2A /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		EE0D97971A75A869009D8A2A /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		EE83EB871A75A0F9008A6745 /* PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				EE06F0341A7C4114000A5974 /* Double+Extension.swift */,
 				EE0D97BA1A75C0A3009D8A2A /* Entities */,
 				EE0D97B71A75C066009D8A2A /* Datastores */,
 				EEE92C8F1A75A6E200860DFD /* ViewControllers */,
@@ -374,6 +377,7 @@
 				EE2B20B11A7715EA0055C95F /* FlickrDatastore.swift in Sources */,
 				EE0D97A21A75A8C7009D8A2A /* PrettyWeatherViewController.swift in Sources */,
 				EE0D97B61A75B78B009D8A2A /* WeatherDaysForecastView.swift in Sources */,
+				EE06F0351A7C4114000A5974 /* Double+Extension.swift in Sources */,
 				EE0D97BC1A75C12B009D8A2A /* WeatherCondition.swift in Sources */,
 				EE358EE31A76FD3200EF523E /* WeatherHourlyForecastView.swift in Sources */,
 				EE972F4B1A770C9C0032AC18 /* WeatherDayForecastView.swift in Sources */,

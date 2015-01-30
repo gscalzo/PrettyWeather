@@ -11,6 +11,7 @@ import Cartography
 import FXBlurView
 
 class PrettyWeatherViewController: UIViewController {
+    private let gradientView = UIView()
     private let backgroundView = UIImageView()
     private let overlayView = UIImageView()
     private let scrollView = UIScrollView()
@@ -61,6 +62,7 @@ private extension PrettyWeatherViewController{
         overlayView.contentMode = .ScaleAspectFill
         overlayView.clipsToBounds = true
         view.addSubview(overlayView)
+        view.addSubview(gradientView)
         
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(resumeView)
@@ -94,6 +96,13 @@ extension PrettyWeatherViewController{
             view.right == view.superview!.right
         }
         
+        layout(gradientView) { view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
+        
         layout(resumeView) { view in
             view.width == view.superview!.width
             view.centerX == view.superview!.centerX
@@ -112,7 +121,7 @@ extension PrettyWeatherViewController{
             view.centerX == view.superview!.centerX
         }
         
-        let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
+        let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 10
         layout(resumeView) { view in
             view.top == view.superview!.top + resumeToInsect
             return
@@ -123,8 +132,20 @@ extension PrettyWeatherViewController{
 // MARK: Style
 private extension PrettyWeatherViewController{
     func style(){
-        view.backgroundColor = UIColor.grayColor()
         daysForecastView.backgroundColor = UIColor.redColor()
+        gradientView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        
+        let blackColor = UIColor(white: 0, alpha: 0.0)
+        let clearColor = UIColor(white: 0, alpha: 1.0)
+        
+        gradientLayer.colors = [blackColor.CGColor, clearColor.CGColor]
+        
+        gradientLayer.startPoint = CGPointMake(1.0, 0.5)
+        gradientLayer.endPoint = CGPointMake(1.0, 1.0)
+        gradientView.layer.mask = gradientLayer
+        
     }
 }
 
