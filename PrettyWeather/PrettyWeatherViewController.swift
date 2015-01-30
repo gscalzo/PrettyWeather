@@ -95,13 +95,13 @@ extension PrettyWeatherViewController{
         }
         
         layout(resumeView) { view in
-            view.left == view.superview!.left + 20
-            return
+            view.width == view.superview!.width
+            view.centerX == view.superview!.centerX
         }
         
         layout(hourlyForecastView, resumeView) { view, view2 in
             view.top == view2.bottom + 20
-            view.width == view.superview!.width - 40
+            view.width == view.superview!.width
             view.centerX == view.superview!.centerX
         }
         
@@ -139,6 +139,7 @@ private extension PrettyWeatherViewController{
     }
     
     func renderCurrent(currentWeatherConditions: WeatherCondition){
+        resumeView.render(currentWeatherConditions)
         NSLog("\(currentWeatherConditions.cityName)")
         NSLog("\(currentWeatherConditions.weather)")
         NSLog("\(currentWeatherConditions.time)")
@@ -184,8 +185,4 @@ extension PrettyWeatherViewController: UIScrollViewDelegate{
         overlayView.alpha = min (1.0, offset/magicNumer)
         
     }
-}
-
-// MARK: Render
-private extension PrettyWeatherViewController{
 }
