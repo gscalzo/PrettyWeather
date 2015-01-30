@@ -13,16 +13,15 @@ import SwiftyJSON
 
 class WeatherDatastore {
     
-    func updateForecast(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
-        block: (weatherConditions: Array<WeatherCondition>) -> Void) {
-            return
-            let url = "http://api.openweathermap.org/data/2.5/forecast"
-            let params = ["lat":latitude, "lon":longitude]
+    func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
+        block: (weatherConditions: WeatherCondition) -> Void) {
+            let url = "http://api.openweathermap.org/data/2.5/weather"
+            let params = ["lat":lat, "lon":lon]
             println(params)
             
             Alamofire.request(.GET, url, parameters: params)
                 .responseJSON { (request, response, json, error) in
-                    if(error != nil) {
+                    if(error != nil && json != nil) {
                         println("Error: \(error)")
                         println(request)
                         println(response)
@@ -30,7 +29,7 @@ class WeatherDatastore {
                     }
                     else {
                         println("Success: \(url)")
-                        println(request)
+                        println(json)
                         var json = JSON(json!)
                         println(json)
 //                        self.updateUISuccess(json)
@@ -38,4 +37,55 @@ class WeatherDatastore {
             }
     }
 
+    func retrieveHourlyForecastAtLat(lat: CLLocationDegrees,
+        lon: CLLocationDegrees,
+        block: (weatherConditions: Array<WeatherCondition>) -> Void) {
+            let url = "http://api.openweathermap.org/data/2.5/forecast"
+            let params = ["lat":lat, "lon":lon]
+            println(params)
+            
+            Alamofire.request(.GET, url, parameters: params)
+                .responseJSON { (request, response, json, error) in
+                    if(error != nil && json != nil) {
+                        println("Error: \(error)")
+                        println(request)
+                        println(response)
+                        //                        self.loading.text = "Internet appears down!"
+                    }
+                    else {
+                        println("Success: \(url)")
+                        println(json)
+                        var json = JSON(json!)
+                        println(json)
+                        //                        self.updateUISuccess(json)
+                    }
+            }
+    }
+    
+    func retrieveDailyForecastAtLat(lat: Double,
+        lon: Double,
+        dayCnt: Int,
+        block: (weatherConditions: Array<WeatherCondition>) -> Void) {
+            let url = "http://api.openweathermap.org/data/2.5/forecast/daily"
+            let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt)]
+            println(params)
+            
+            Alamofire.request(.GET, url, parameters: params)
+                .responseJSON { (request, response, json, error) in
+                    if(error != nil && json != nil) {
+                        println("Error: \(error)")
+                        println(request)
+                        println(response)
+                        //                        self.loading.text = "Internet appears down!"
+                    }
+                    else {
+                        println("Success: \(url)")
+                        println(json)
+                        var json = JSON(json!)
+                        println(json)
+                        //                        self.updateUISuccess(json)
+                    }
+            }
+    }
+    
 }

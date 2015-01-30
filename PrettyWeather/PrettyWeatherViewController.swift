@@ -17,21 +17,30 @@ class PrettyWeatherViewController: UIViewController {
     private let resumeView = WeatherResumeView(frame: CGRectZero)
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
     private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
-
+    private var locationDatastore: LocationDatastore?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         layoutView()
         style()
         render()
-        FlickrDatastore().callflickr(){ image in
-            self.backgroundView.image = image
-            self.overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
-            self.overlayView.alpha = 0
-        }
-        WeatherDatastore().updateForecast(51.5072, longitude: 0.1275) {
-            weatherConditions in
-            println(weatherConditions)
+        locationDatastore = LocationDatastore() { [weak self] location in
+            FlickrDatastore().retrieveImageAtLat(location.lat, lon: location.lon){ image in
+                self?.backgroundView.image = image
+                self?.overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+                self?.overlayView.alpha = 0
+            }
+            let weatherDatastore = WeatherDatastore()
+            weatherDatastore.retrieveCurrentWeatherAtLat(location.lat, lon: location.lon) {
+                currentWeatherConditions in
+            }
+            weatherDatastore.retrieveHourlyForecastAtLat(location.lat, lon: location.lon) {
+                hourlyWeatherConditions in
+            }
+            weatherDatastore.retrieveDailyForecastAtLat(location.lat, lon: location.lon, dayCnt: 7) {
+                hourlyWeatherConditions in
+            }
         }
     }
 }
@@ -79,12 +88,12 @@ extension PrettyWeatherViewController{
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
-
+        
         layout(resumeView) { view in
             view.left == view.superview!.left + 20
             return
         }
-
+        
         layout(hourlyForecastView, resumeView) { view, view2 in
             view.top == view2.bottom + 20
             view.width == view.superview!.width - 40
@@ -97,7 +106,7 @@ extension PrettyWeatherViewController{
             view.bottom == view.superview!.bottom - 20
             view.centerX == view.superview!.centerX
         }
-
+        
         let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
         layout(resumeView) { view in
             view.top == view.superview!.top + resumeToInsect
@@ -125,13 +134,14 @@ private extension PrettyWeatherViewController{
 extension PrettyWeatherViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
-        println(offset)
-        println(scrollView.contentSize.height)
+        //        println(offset)
+        //        println(scrollView.contentSize.height)
         let resumeToInsect: Float = Float(view.frame.height) - Float(resumeView.frame.height) - 20
-        println(resumeToInsect)
+        //        println(resumeToInsect)
         // ?????? come si calcola sto numero???????
-        let magicNumer: CGFloat = CGFloat(resumeToInsect)
+        // mettiamo metà schermo?
+        let magicNumer: CGFloat = CGFloat(view.frame.height)/2
         overlayView.alpha = min (1.0, offset/magicNumer)
-
+        
     }
 }
