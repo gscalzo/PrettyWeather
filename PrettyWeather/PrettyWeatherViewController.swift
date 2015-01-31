@@ -161,28 +161,11 @@ private extension PrettyWeatherViewController{
     
     func renderCurrent(currentWeatherConditions: WeatherCondition){
         resumeView.render(currentWeatherConditions)
-        NSLog("\(currentWeatherConditions.cityName)")
-        NSLog("\(currentWeatherConditions.weather)")
-        NSLog("\(currentWeatherConditions.time)")
-        NSLog("\(currentWeatherConditions.maxTempKelvin)")
-        NSLog("\(currentWeatherConditions.minTempKelvin)")
-        NSLog("\(currentWeatherConditions.maxTempCelsius)")
-        NSLog("\(currentWeatherConditions.minTempCelsius)")
-        NSLog("Flush")
-    }
-    func renderHourly(weatherConditions: Array<WeatherCondition>){
-        for currentWeatherConditions in weatherConditions {
-            NSLog("\(currentWeatherConditions.cityName)")
-            NSLog("\(currentWeatherConditions.weather)")
-            NSLog("\(currentWeatherConditions.time)")
-            NSLog("\(currentWeatherConditions.maxTempKelvin)")
-            NSLog("\(currentWeatherConditions.minTempKelvin)")
-            NSLog("\(currentWeatherConditions.maxTempCelsius)")
-            NSLog("\(currentWeatherConditions.minTempCelsius)")
-            NSLog("Flush")
-        }
     }
     
+    func renderHourly(weatherConditions: Array<WeatherCondition>){
+        hourlyForecastView.render(weatherConditions)
+    }
     
     func renderDaily(weatherConditions: Array<WeatherCondition>){
         for currentWeatherConditions in weatherConditions {

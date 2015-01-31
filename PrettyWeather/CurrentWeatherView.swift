@@ -112,6 +112,7 @@ private extension CurrentWeatherView{
 //        currentTempLbl.backgroundColor = UIColor.redColor()
 //        cityLbl.backgroundColor = UIColor.redColor()
         
+        iconLbl.textColor = UIColor.whiteColor()
         weatherLbl.font = UIFont.latoLightFontOfSize(20)
         weatherLbl.textColor = UIColor.whiteColor()
         
@@ -133,10 +134,10 @@ private extension CurrentWeatherView{
 // MARK: Render
 extension CurrentWeatherView{
     func render(weatherCondition: WeatherCondition){
+        iconLbl.attributedText = iconStringFromIcon(weatherCondition.icon!, 22)
         weatherLbl.text = weatherCondition.weather
         
         var usesMetric = false
-
         if let localeSystem = NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
             usesMetric = localeSystem
         }

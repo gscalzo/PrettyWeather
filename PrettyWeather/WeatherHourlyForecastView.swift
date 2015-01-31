@@ -12,7 +12,7 @@ import Cartography
 class WeatherHourlyForecastView: UIView {
     private var didSetupConstraints = false
     private let scrollView = UIScrollView()
-    private var forecastCells = Array<WeatherDayForecastView>()
+    private var forecastCells = Array<WeatherHourForecastView>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,8 +30,8 @@ class WeatherHourlyForecastView: UIView {
 // MARK: Setup
 private extension WeatherHourlyForecastView{
     func setup(){
-        for i in 0..<10 {
-            let cell = WeatherDayForecastView(frame: CGRectZero)
+        for i in 0..<7 {
+            let cell = WeatherHourForecastView(frame: CGRectZero)
             forecastCells.append(cell)
             scrollView.addSubview(cell)
         }
@@ -47,7 +47,7 @@ extension WeatherHourlyForecastView{
             super.updateConstraints()
         }
         layout(self) { view in
-            view.height == 80
+            view.height == 100
             return
         }
         layout(scrollView) { view in
@@ -90,6 +90,14 @@ extension WeatherHourlyForecastView{
 // MARK: Style
 private extension WeatherHourlyForecastView{
     func style(){
-        backgroundColor = UIColor.blueColor()
+    }
+}
+
+// MARK: Render
+extension WeatherHourlyForecastView{
+    func render(weatherConditions: Array<WeatherCondition>){
+        for (idx, view) in enumerate(forecastCells) {
+            view.render(weatherConditions[idx])
+        }
     }
 }
