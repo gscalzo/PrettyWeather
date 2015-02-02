@@ -43,8 +43,9 @@ private extension WeatherHourlyForecastView{
 // MARK: Layout
 extension WeatherHourlyForecastView{
     override func updateConstraints() {
-        if didSetupConstraints == false {
+        if didSetupConstraints {
             super.updateConstraints()
+            return
         }
         layout(self) { view in
             view.height == 100

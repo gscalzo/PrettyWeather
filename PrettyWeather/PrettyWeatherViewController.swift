@@ -10,6 +10,7 @@ import UIKit
 import Cartography
 import FXBlurView
 
+
 class PrettyWeatherViewController: UIViewController {
     private let gradientView = UIView()
     private let backgroundView = UIImageView()
@@ -25,7 +26,7 @@ class PrettyWeatherViewController: UIViewController {
         setup()
         layoutView()
         style()
-        render(UIImage(named: "StockPhoto"))
+        render(UIImage(named: "DefaultImage"))
         locationDatastore = LocationDatastore() { [weak self] location in
             FlickrDatastore().retrieveImageAtLat(location.lat, lon: location.lon){ image in
                 self?.render(image)
@@ -44,7 +45,7 @@ class PrettyWeatherViewController: UIViewController {
             }
             weatherDatastore.retrieveDailyForecastAtLat(location.lat, lon: location.lon, dayCnt: 7) {
                 hourlyWeatherConditions in
-                self?.renderHourly(hourlyWeatherConditions)
+                self?.renderDaily(hourlyWeatherConditions)
                 return
             }
         }
@@ -132,7 +133,6 @@ extension PrettyWeatherViewController{
 // MARK: Style
 private extension PrettyWeatherViewController{
     func style(){
-        daysForecastView.backgroundColor = UIColor.redColor()
         gradientView.backgroundColor = UIColor(white: 0, alpha: 0.7)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = gradientView.bounds
@@ -168,16 +168,7 @@ private extension PrettyWeatherViewController{
     }
     
     func renderDaily(weatherConditions: Array<WeatherCondition>){
-        for currentWeatherConditions in weatherConditions {
-            NSLog("\(currentWeatherConditions.cityName)")
-            NSLog("\(currentWeatherConditions.weather)")
-            NSLog("\(currentWeatherConditions.time)")
-            NSLog("\(currentWeatherConditions.maxTempKelvin)")
-            NSLog("\(currentWeatherConditions.minTempKelvin)")
-            NSLog("\(currentWeatherConditions.maxTempCelsius)")
-            NSLog("\(currentWeatherConditions.minTempCelsius)")
-            NSLog("Flush")
-        }
+        daysForecastView.render(weatherConditions)
     }
 }
 

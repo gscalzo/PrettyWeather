@@ -30,8 +30,9 @@ class CurrentWeatherView: UIView {
     }
     
     override func updateConstraints() {
-        if didSetupConstraints == false {
+        if didSetupConstraints {
             super.updateConstraints()
+            return
         }
         layoutView()
         super.updateConstraints()
@@ -103,15 +104,7 @@ private extension CurrentWeatherView{
 
 // MARK: Style
 private extension CurrentWeatherView{
-    func style(){
-//        backgroundColor = UIColor.greenColor()
-//        iconLbl.backgroundColor = UIColor.brownColor()
-//        weatherLbl.backgroundColor = UIColor.brownColor()
-//        minTempLbl.backgroundColor = UIColor.brownColor()
-//        maxTempLbl.backgroundColor = UIColor.brownColor()
-//        currentTempLbl.backgroundColor = UIColor.redColor()
-//        cityLbl.backgroundColor = UIColor.redColor()
-        
+    func style(){        
         iconLbl.textColor = UIColor.whiteColor()
         weatherLbl.font = UIFont.latoLightFontOfSize(20)
         weatherLbl.textColor = UIColor.whiteColor()

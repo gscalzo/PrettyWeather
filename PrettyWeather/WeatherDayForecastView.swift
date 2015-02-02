@@ -1,5 +1,5 @@
 //
-//  WeatherHourForecastView.swift
+//  WeatherDayForecastView.swift
 //  PrettyWeather
 //
 //  Created by Giordano Scalzo on 27/01/2015.
@@ -10,10 +10,10 @@ import Foundation
 import Cartography
 import WeatherIconsKit
 
-class WeatherHourForecastView: UIView {
+class WeatherDayForecastView: UIView {
     private var didSetupConstraints = false
     private let iconLabel = UILabel()
-    private let hourLabel = UILabel()
+    private let dayLabel = UILabel()
     private let tempsLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -30,33 +30,41 @@ class WeatherHourForecastView: UIView {
 
 
 // MARK: Setup
-private extension WeatherHourForecastView{
+private extension WeatherDayForecastView{
     func setup(){
+        addSubview(dayLabel)
         addSubview(iconLabel)
-        addSubview(hourLabel)
         addSubview(tempsLabel)
     }
 }
 
 // MARK: Layout
-extension WeatherHourForecastView{
+extension WeatherDayForecastView{
     override func updateConstraints() {
         if didSetupConstraints {
             super.updateConstraints()
             return
         }
-        layout(iconLabel) { view in
-            view.center == view.superview!.center
+        layout(self) { view in
             view.height == 50
             return
         }
-        layout(hourLabel) { view in
-            view.centerX == view.superview!.centerX
-            view.top == view.superview!.top
+        
+        layout(iconLabel) { view in
+            view.centerY == view.superview!.centerY
+            view.left == view.superview!.left + 20
+            view.width == view.height
+            view.height == 50
         }
+        
+        layout(dayLabel, iconLabel) { view, view2 in
+            view.centerY == view.superview!.centerY
+            view.left == view2.right + 20
+        }
+        
         layout(tempsLabel) { view in
-            view.centerX == view.superview!.centerX
-            view.bottom == view.superview!.bottom
+            view.centerY == view.superview!.centerY
+            view.right == view.superview!.right - 20
         }
         super.updateConstraints()
         didSetupConstraints = true
@@ -64,11 +72,11 @@ extension WeatherHourForecastView{
 }
 
 // MARK: Style
-private extension WeatherHourForecastView{
-    func style(){        
+private extension WeatherDayForecastView{
+    func style(){
         iconLabel.textColor = UIColor.whiteColor()
-        hourLabel.font = UIFont.latoFontOfSize(20)
-        hourLabel.textColor = UIColor.whiteColor()
+        dayLabel.font = UIFont.latoFontOfSize(20)
+        dayLabel.textColor = UIColor.whiteColor()
         tempsLabel.font = UIFont.latoFontOfSize(20)
         tempsLabel.textColor = UIColor.whiteColor()
     }
@@ -76,11 +84,11 @@ private extension WeatherHourForecastView{
 
 
 // MARK: Render
-extension WeatherHourForecastView{
+extension WeatherDayForecastView{
     func render(weatherCondition: WeatherCondition){
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        hourLabel.text = dateFormatter.stringFromDate(weatherCondition.time)
+        dateFormatter.dateFormat = "EEEE"
+        dayLabel.text = dateFormatter.stringFromDate(weatherCondition.time)
         iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, 30)
         
         var usesMetric = false
@@ -89,9 +97,9 @@ extension WeatherHourForecastView{
         }
         
         if usesMetric {
-            tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())° \(weatherCondition.maxTempCelsius.roundToInt())°"
+            tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())°     \(weatherCondition.maxTempCelsius.roundToInt())°"
         } else {
-            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())° \(weatherCondition.maxTempFahrenheit.roundToInt())°"
+            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())°     \(weatherCondition.maxTempFahrenheit.roundToInt())°"
         }
     }
 }
