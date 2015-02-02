@@ -27,6 +27,10 @@ class PrettyWeatherViewController: UIViewController {
         layoutView()
         style()
         render(UIImage(named: "DefaultImage"))
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         locationDatastore = LocationDatastore() { [weak self] location in
             FlickrDatastore().retrieveImageAtLat(location.lat, lon: location.lon){ image in
                 self?.render(image)
