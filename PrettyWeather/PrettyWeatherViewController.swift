@@ -11,6 +11,10 @@ import Cartography
 
 class PrettyWeatherViewController: UIViewController {
     private let backgroundView = UIImageView()
+    private let scrollView = UIScrollView()
+    private let currentWeatherView = CurrentWeatherView(frame: CGRectZero)
+    private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
+    private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,11 @@ private extension PrettyWeatherViewController{
         backgroundView.contentMode = .ScaleAspectFill
         backgroundView.clipsToBounds = true
         view.addSubview(backgroundView)
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.addSubview(currentWeatherView)
+        scrollView.addSubview(hourlyForecastView)
+        scrollView.addSubview(daysForecastView)
+        view.addSubview(scrollView)
     }
 }
 
@@ -38,6 +47,37 @@ extension PrettyWeatherViewController{
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
+        }
+
+        layout(scrollView) { view in
+            view.top == view.superview!.top
+            view.bottom == view.superview!.bottom
+            view.left == view.superview!.left
+            view.right == view.superview!.right
+        }
+        
+        layout(currentWeatherView) { view in
+            view.width == view.superview!.width
+            view.centerX == view.superview!.centerX
+        }
+        
+        layout(hourlyForecastView, currentWeatherView) { view, view2 in
+            view.top == view2.bottom + 20
+            view.width == view.superview!.width
+            view.centerX == view.superview!.centerX
+        }
+        
+        layout(daysForecastView, hourlyForecastView) { view, view2 in
+            view.top == view2.bottom
+            view.width == view2.width
+            view.bottom == view.superview!.bottom - 20
+            view.centerX == view.superview!.centerX
+        }
+        
+        let currentWeatherInsect: Float = Float(view.frame.height) - Float(currentWeatherView.frame.height) - 10
+        layout(currentWeatherView) { view in
+            view.top == view.superview!.top + currentWeatherInsect
+            return
         }
     }
 }
