@@ -1,0 +1,6 @@
+framework module WeatherIconsKit {
+  umbrella header "Pods-PrettyWeather-WeatherIconsKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
