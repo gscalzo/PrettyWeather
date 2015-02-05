@@ -94,11 +94,12 @@ private extension WeatherHourlyForecastView{
     }
 }
 
+
 // MARK: Render
 extension WeatherHourlyForecastView{
-    func render(){
-        for view in forecastCells {
-            view.render()
+    func render(weatherConditions: Array<WeatherCondition>){
+        for (idx, view) in enumerate(forecastCells) {
+            view.render(weatherConditions[idx])
         }
     }
 }

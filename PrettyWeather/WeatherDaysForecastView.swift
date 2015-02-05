@@ -81,11 +81,10 @@ private extension WeatherDaysForecastView{
 }
 
 
-// MARK: Render
 extension WeatherDaysForecastView{
-    func render(){
-        for view in forecastCells {
-            view.render()
+    func render(weatherConditions: Array<WeatherCondition>){
+        for (idx, view) in enumerate(forecastCells) {
+            view.render(weatherConditions[idx])
         }
     }
 }
