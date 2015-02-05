@@ -32,7 +32,6 @@ class FlickrDatastore {
     private func extractImageFk(fk: FlickrKit, response: AnyObject?,
         error: NSError?, closure: (image: UIImage?) -> Void) {
         if let response = response as? [String:AnyObject]{
-            println(response)
             let r = response as [String:AnyObject]
             if let photos = response["photos"] as? [String:AnyObject] {
                 if let listOfPhotos: AnyObject = photos["photo"] {
