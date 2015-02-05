@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		359A3AFF3467D0B51C41449E /* Pods_PrettyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0B9940CE0649C36C2A8421 /* Pods_PrettyWeather.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EEA556101A82EBC0001C4AB5 /* FlickrDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5560F1A82EBC0001C4AB5 /* FlickrDatastore.swift */; };
 		EEF97A911A8041AA0027B6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF97A901A8041AA0027B6E5 /* AppDelegate.swift */; };
 		EEF97A981A8041AB0027B6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF97A971A8041AB0027B6E5 /* Images.xcassets */; };
 		EEF97A9B1A8041AB0027B6E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF97A991A8041AB0027B6E5 /* LaunchScreen.xib */; };
@@ -34,6 +35,7 @@
 		0C0B9940CE0649C36C2A8421 /* Pods_PrettyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrettyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBF87FC28774CB396AD7464 /* Pods-PrettyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.release.xcconfig"; sourceTree = "<group>"; };
 		62D38930E56F6E11EB887527 /* Pods-PrettyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrettyWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrettyWeather/Pods-PrettyWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		EEA5560F1A82EBC0001C4AB5 /* FlickrDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrDatastore.swift; sourceTree = "<group>"; };
 		EEF97A8B1A8041AA0027B6E5 /* PrettyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF97A8F1A8041AA0027B6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF97A901A8041AA0027B6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EEA5560E1A82EB9D001C4AB5 /* Datastores */ = {
+			isa = PBXGroup;
+			children = (
+				EEA5560F1A82EBC0001C4AB5 /* FlickrDatastore.swift */,
+			);
+			name = Datastores;
+			sourceTree = "<group>";
+		};
 		EEF97A821A8041AA0027B6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		EEF97A8D1A8041AA0027B6E5 /* PrettyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				EEA5560E1A82EB9D001C4AB5 /* Datastores */,
 				EEF97AB01A8042870027B6E5 /* ViewControllers */,
 				EEF97A901A8041AA0027B6E5 /* AppDelegate.swift */,
 				EEF97A971A8041AB0027B6E5 /* Images.xcassets */,
@@ -308,6 +319,7 @@
 			files = (
 				EEF97B281A81921100F037BA /* WeatherHourlyForecastView.swift in Sources */,
 				EEF97B241A8183F300F037BA /* CurrentWeatherView.swift in Sources */,
+				EEA556101A82EBC0001C4AB5 /* FlickrDatastore.swift in Sources */,
 				EEF97B2C1A81A93C00F037BA /* WeatherDayForecastView.swift in Sources */,
 				EEF97A911A8041AA0027B6E5 /* AppDelegate.swift in Sources */,
 				EEF97AB21A8042A40027B6E5 /* PrettyWeatherViewController.swift in Sources */,
