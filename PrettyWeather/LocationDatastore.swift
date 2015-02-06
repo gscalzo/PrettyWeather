@@ -12,7 +12,6 @@ import CoreLocation
 struct Location {
     let lat: Double
     let lon: Double
-    let cityName: String
 }
 
 class LocationDatastore: NSObject, CLLocationManagerDelegate {
@@ -42,7 +41,7 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         NSLog("Error: \(error)")
         dispatch_async(dispatch_get_main_queue()){
-            self.onLocationFound(Location(lat: 37.3175, lon: 122.0419, cityName: "Cupertino"))
+            self.onLocationFound(Location(lat: 37.3175, lon: 122.0419))
         }
     }
     
@@ -52,7 +51,7 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
         var coord = locationObj.coordinate
         
         dispatch_async(dispatch_get_main_queue()){
-            self.onLocationFound(Location(lat: coord.latitude, lon: coord.longitude, cityName: "Pippo"))
+            self.onLocationFound(Location(lat: coord.latitude, lon: coord.longitude))
         }
         
         stopUpdating()
