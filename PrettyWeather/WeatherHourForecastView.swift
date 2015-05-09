@@ -50,7 +50,6 @@ private extension WeatherHourForecastView{
         layout(iconLabel) { view in
             view.center == view.superview!.center
             view.height == 50
-            return
         }
         layout(hourLabel) { view in
             view.centerX == view.superview!.centerX
