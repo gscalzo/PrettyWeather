@@ -51,7 +51,6 @@ private extension WeatherDayForecastView{
     func layoutView() {
         layout(self) { view in
             view.height == 50
-            return
         }
         
         layout(iconLabel) { view in
