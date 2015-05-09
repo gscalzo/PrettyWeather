@@ -28,28 +28,23 @@ class FlickrDatastore {
                     closure: closure)
         }
     }
-    
     private func extractImageFk(fk: FlickrKit, response: AnyObject?,
         error: NSError?, closure: (image: UIImage?) -> Void) {
-        if let response = response as? [String:AnyObject]{
-            let r = response as [String:AnyObject]
-            if let photos = response["photos"] as? [String:AnyObject] {
-                if let listOfPhotos: AnyObject = photos["photo"] {
-                    if listOfPhotos.count > 0 {
-                        let randomIndex = Int(arc4random_uniform(UInt32(listOfPhotos.count)))
-                        let photo = listOfPhotos[randomIndex] as [String:AnyObject]
-                        let url = fk.photoURLForSize(FKPhotoSizeMedium640,
-                            fromPhotoDictionary: photo)
-                        let image = UIImage(data: NSData(contentsOfURL: url)!)
-                        dispatch_async(dispatch_get_main_queue()){
-                            closure(image: image!)
-                        }
+            if let response = response as? [String:AnyObject],
+                photos = response["photos"] as? [String:AnyObject],
+                listOfPhotos: AnyObject = photos["photo"]
+                where listOfPhotos.count > 0 {
+                    let randomIndex = Int(arc4random_uniform(UInt32(listOfPhotos.count)))
+                    let photo = listOfPhotos[randomIndex] as! [String:AnyObject]
+                    let url = fk.photoURLForSize(FKPhotoSizeMedium640,
+                        fromPhotoDictionary: photo)
+                    let image = UIImage(data: NSData(contentsOfURL: url)!)
+                    dispatch_async(dispatch_get_main_queue()){
+                        closure(image: image!)
                     }
-                }
+            } else {
+                println(error)
+                println(response)
             }
-        } else {
-            println(error)
-            println(response)
-        }
     }
 }
