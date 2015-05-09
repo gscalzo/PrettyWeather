@@ -1,5 +1,3 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
 use_frameworks!
 
 target 'PrettyWeather' do
@@ -11,8 +9,3 @@ target 'PrettyWeather' do
 	pod 'FXBlurView', '~> 1.6.3'
 	pod 'LatoFont', :git => "https://github.com/gscalzo/LatoFont.git"
 end
-
-target 'PrettyWeatherTests' do
-
-end
-
