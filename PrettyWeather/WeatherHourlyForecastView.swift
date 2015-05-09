@@ -52,7 +52,6 @@ private extension WeatherHourlyForecastView{
     func layoutView(){
         layout(self) { view in
             view.height == 100
-            return
         }
         layout(scrollView) { view in
             view.top == view.superview!.top
@@ -63,11 +62,9 @@ private extension WeatherHourlyForecastView{
         
         layout(forecastCells.first!) { view in
             view.left == view.superview!.left
-            return
         }
         layout(forecastCells.last!) { view in
             view.right == view.superview!.right
-            return
         }
         
         for idx in 1..<forecastCells.count {
@@ -75,7 +72,6 @@ private extension WeatherHourlyForecastView{
             let cell = forecastCells[idx]
             layout(previousCell, cell) { view, view2 in
                 view.right == view2.left + 5
-                return
             }
         }
         for cell in forecastCells {
