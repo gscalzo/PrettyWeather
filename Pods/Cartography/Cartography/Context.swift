@@ -14,34 +14,27 @@ import AppKit
 
 public class Context {
     internal var constraints: [Constraint] = []
-    internal let performLayout: Bool
-
-    init(performLayout: Bool){
-        self.performLayout = performLayout
-    }
 
     internal func addConstraint(from: Property, to: Property? = nil, coefficients: Coefficients = Coefficients(), relation: NSLayoutRelation = .Equal) -> NSLayoutConstraint {
-        from.view.car_setTranslatesAutoresizingMaskIntoConstraints(false)
-
-        var toAttribute: NSLayoutAttribute! = NSLayoutAttribute.NotAnAttribute
-
-        if to == nil {
-            toAttribute = NSLayoutAttribute.NotAnAttribute
-        } else {
-            toAttribute = to!.attribute
-        }
-
-        let superview = closestCommonAncestor(from.view, to?.view)
+        from.view.car_translatesAutoresizingMaskIntoConstraints = false
 
         let layoutConstraint = NSLayoutConstraint(item: from.view,
-            attribute: from.attribute,
-            relatedBy: relation,
-            toItem: to?.view,
-            attribute: toAttribute,
-            multiplier: CGFloat(coefficients.multiplier),
-            constant: CGFloat(coefficients.constant))
+                                                  attribute: from.attribute,
+                                                  relatedBy: relation,
+                                                  toItem: to?.view,
+                                                  attribute: to?.attribute ?? .NotAnAttribute,
+                                                  multiplier: CGFloat(coefficients.multiplier),
+                                                  constant: CGFloat(coefficients.constant))
 
-        constraints += [ Constraint(view: superview!, layoutConstraint: layoutConstraint) ]
+        if let to = to {
+            if let common = closestCommonAncestor(from.view, to.view ) {
+                constraints.append(Constraint(view: common, layoutConstraint: layoutConstraint))
+            } else {
+                fatalError("No common superview found between \(from.view) and \(to.view)")
+            }
+        } else {
+            constraints.append(Constraint(view: from.view, layoutConstraint: layoutConstraint))
+        }
 
         return layoutConstraint
     }
@@ -56,23 +49,5 @@ public class Context {
         }
 
         return results
-    }
-
-    internal func installConstraints() {
-        let views = constraints.map({ $0.view })
-
-        for constraint in constraints {
-            constraint.install()
-
-            let existing = constraint.view.car_installedLayoutConstraints ?? []
-
-            constraint.view.car_installedLayoutConstraints = existing + [ constraint ]
-        }
-
-        if performLayout {
-            for view in views {
-                view.car_updateLayout()
-            }
-        }
     }
 }

@@ -58,7 +58,6 @@ private extension CurrentWeatherView{
     func layoutView(){
         layout(self) { view in
             view.height == 160
-            return
         }
         layout(iconLbl) { view in
             view.top == view.superview!.top

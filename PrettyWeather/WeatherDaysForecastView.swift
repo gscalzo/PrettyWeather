@@ -49,7 +49,6 @@ private extension WeatherDaysForecastView{
         setTranslatesAutoresizingMaskIntoConstraints(false)
         layout(forecastCells.first!) { view in
             view.top == view.superview!.top
-            return
         }
         
         for idx in 1..<forecastCells.count {
@@ -57,7 +56,6 @@ private extension WeatherDaysForecastView{
             let cell = forecastCells[idx]
             layout(cell, previousCell) { view, view2 in
                 view.top == view2.bottom
-                return
             }
         }
         for cell in forecastCells {
@@ -68,7 +66,6 @@ private extension WeatherDaysForecastView{
         }
         layout(forecastCells.last!) { view in
             view.bottom == view.superview!.bottom
-            return
         }
     }
 }

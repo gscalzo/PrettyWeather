@@ -64,8 +64,6 @@ class WeatherDatastore {
                     } else {
                         var json = JSON(json!)
                         let list: Array<JSON> = json["list"].arrayValue
-                        NSLog("\(list)")
-                        NSLog("flush")
                         let weatherConditions: Array<WeatherCondition> = list.map() {
                             return self.createDayForecastFronJson($0)
                         }
