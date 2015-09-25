@@ -33,7 +33,7 @@ private extension PrettyWeatherViewController{
 // MARK: Layout
 extension PrettyWeatherViewController{
     func layoutView() {
-        layout(backgroundView) { view in
+        constrain(backgroundView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
