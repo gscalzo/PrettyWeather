@@ -146,12 +146,12 @@
 		EEF97AB01A8042870027B6E5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EEF97AB11A8042A40027B6E5 /* PrettyWeatherViewController.swift */,
 				EEF97B231A8183F300F037BA /* CurrentWeatherView.swift */,
-				EEF97B271A81921100F037BA /* WeatherHourlyForecastView.swift */,
-				EEF97B291A81A38A00F037BA /* WeatherHourForecastView.swift */,
-				EEF97B251A8191FA00F037BA /* WeatherDaysForecastView.swift */,
+				EEF97AB11A8042A40027B6E5 /* PrettyWeatherViewController.swift */,
 				EEF97B2B1A81A93C00F037BA /* WeatherDayForecastView.swift */,
+				EEF97B251A8191FA00F037BA /* WeatherDaysForecastView.swift */,
+				EEF97B291A81A38A00F037BA /* WeatherHourForecastView.swift */,
+				EEF97B271A81921100F037BA /* WeatherHourlyForecastView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
