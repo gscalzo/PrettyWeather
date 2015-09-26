@@ -47,15 +47,15 @@ private extension WeatherHourForecastView{
 // MARK: Layout
 private extension WeatherHourForecastView{
     func layoutView() {
-        layout(iconLabel) { view in
+        constrain(iconLabel) { view in
             view.center == view.superview!.center
             view.height == 50
         }
-        layout(hourLabel) { view in
+        constrain(hourLabel) { view in
             view.centerX == view.superview!.centerX
             view.top == view.superview!.top
         }
-        layout(tempsLabel) { view in
+        constrain(tempsLabel) { view in
             view.centerX == view.superview!.centerX
             view.bottom == view.superview!.bottom
         }

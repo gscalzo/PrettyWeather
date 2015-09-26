@@ -49,23 +49,23 @@ private extension WeatherDayForecastView{
 // MARK: Layout
 private extension WeatherDayForecastView{
     func layoutView() {
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 50
         }
         
-        layout(iconLabel) { view in
+        constrain(iconLabel) { view in
             view.centerY == view.superview!.centerY
             view.left == view.superview!.left + 20
             view.width == view.height
             view.height == 50
         }
         
-        layout(dayLabel, iconLabel) { view, view2 in
+        constrain(dayLabel, iconLabel) { view, view2 in
             view.centerY == view.superview!.centerY
             view.left == view2.right + 20
         }
         
-        layout(tempsLabel) { view in
+        constrain(tempsLabel) { view in
             view.centerY == view.superview!.centerY
             view.right == view.superview!.right - 20
         }
