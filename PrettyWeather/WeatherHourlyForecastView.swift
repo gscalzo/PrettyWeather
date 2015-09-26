@@ -42,7 +42,7 @@ private extension WeatherHourlyForecastView{
 // MARK: Layout
 private extension WeatherHourlyForecastView{
     func layoutView(){
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 60
             return
         }

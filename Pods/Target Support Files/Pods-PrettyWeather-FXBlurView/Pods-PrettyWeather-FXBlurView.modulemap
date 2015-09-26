@@ -1,6 +1,0 @@
-framework module FXBlurView {
-  umbrella header "Pods-PrettyWeather-FXBlurView-umbrella.h"
-
-  export *
-  module * { export * }
-}

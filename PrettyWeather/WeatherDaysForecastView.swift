@@ -40,7 +40,7 @@ private extension WeatherDaysForecastView{
 // MARK: Layout
 private extension WeatherDaysForecastView{
     func layoutView(){
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 300
             return
         }

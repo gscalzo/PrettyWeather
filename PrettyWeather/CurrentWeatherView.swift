@@ -17,7 +17,7 @@ class CurrentWeatherView: UIView {
         style()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -41,7 +41,7 @@ private extension CurrentWeatherView{
 // MARK: Layout
 private extension CurrentWeatherView{
     func layoutView(){
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 160
             return
         }
