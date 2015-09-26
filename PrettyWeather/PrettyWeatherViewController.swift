@@ -74,7 +74,7 @@ extension PrettyWeatherViewController{
             view.centerX == view.superview!.centerX
         }
         
-        let currentWeatherInsect: Float = Float(view.frame.height) - Float(currentWeatherView.frame.height) - 10
+        let currentWeatherInsect: Float = Float(view.frame.height) - 160 - 10
         constrain(currentWeatherView) { view in
             view.top == view.superview!.top + CGFloat(currentWeatherInsect)
             return
