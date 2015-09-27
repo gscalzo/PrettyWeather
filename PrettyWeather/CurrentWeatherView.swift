@@ -56,43 +56,43 @@ private extension CurrentWeatherView{
 // MARK: Layout
 private extension CurrentWeatherView{
     func layoutView(){
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 160
         }
-        layout(iconLbl) { view in
+        constrain(iconLbl) { view in
             view.top == view.superview!.top
             view.left == view.superview!.left + 20
             view.width == 30
             view.width == view.height
         }
-        layout(weatherLbl, iconLbl) { view, view2 in
+        constrain(weatherLbl, iconLbl) { view, view2 in
             view.top == view2.top
             view.left == view2.right + 10
             view.height == view2.height
             view.width == 200
         }
         
-        layout(currentTempLbl, iconLbl) { view, view2 in
+        constrain(currentTempLbl, iconLbl) { view, view2 in
             view.top == view2.bottom
             view.left == view2.left
         }
         
-        layout(currentTempLbl, minTempLbl) { view, view2 in
+        constrain(currentTempLbl, minTempLbl) { view, view2 in
             view.bottom == view2.top
             view.left == view2.left
         }
         
-        layout(minTempLbl) { view in
+        constrain(minTempLbl) { view in
             view.bottom == view.superview!.bottom
             view.height == 30
         }
         
-        layout(maxTempLbl, minTempLbl) { view, view2 in
+        constrain(maxTempLbl, minTempLbl) { view, view2 in
             view.top == view2.top
             view.height == view2.height
             view.left == view2.right + 10
         }
-        layout(cityLbl) { view in
+        constrain(cityLbl) { view in
             view.bottom == view.superview!.bottom
             view.right == view.superview!.right - 10
             view.height == 30
@@ -126,7 +126,7 @@ private extension CurrentWeatherView{
 // MARK: Render
 extension CurrentWeatherView{
     func render(weatherCondition: WeatherCondition){
-        iconLbl.attributedText = iconStringFromIcon(weatherCondition.icon!, 20)
+        iconLbl.attributedText = iconStringFromIcon(weatherCondition.icon!, size: 20)
         weatherLbl.text = weatherCondition.weather
         
         var usesMetric = false

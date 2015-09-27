@@ -79,51 +79,51 @@ private extension PrettyWeatherViewController{
 // MARK: Layout
 extension PrettyWeatherViewController{
     func layoutView() {
-        layout(backgroundView) { view in
+        constrain(backgroundView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
-        layout(overlayView) { view in
+        constrain(overlayView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
-        layout(gradientView) { view in
+        constrain(gradientView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
-        layout(scrollView) { view in
+        constrain(scrollView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
         
-        layout(currentWeatherView) { view in
+        constrain(currentWeatherView) { view in
             view.width == view.superview!.width
             view.centerX == view.superview!.centerX
         }
         
-        layout(hourlyForecastView, currentWeatherView) { view, view2 in
+        constrain(hourlyForecastView, currentWeatherView) { view, view2 in
             view.top == view2.bottom + 20
             view.width == view.superview!.width
             view.centerX == view.superview!.centerX
         }
         
-        layout(daysForecastView, hourlyForecastView) { view, view2 in
+        constrain(daysForecastView, hourlyForecastView) { view, view2 in
             view.top == view2.bottom
             view.width == view2.width
             view.bottom == view.superview!.bottom - 20
             view.centerX == view.superview!.centerX
         }
         
-        let currentWeatherInsect: Float = Float(view.frame.height) - Float(currentWeatherView.frame.height) - 10
-        layout(currentWeatherView) { view in
+        let currentWeatherInsect: CGFloat = view.frame.height - 160 - 10
+        constrain(currentWeatherView) { view in
             view.top == view.superview!.top + currentWeatherInsect
             return
         }

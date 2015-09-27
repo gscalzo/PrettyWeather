@@ -11,20 +11,20 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class WeatherDatastore {    
+class WeatherDatastore {
     func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees,
         block: (weatherCondition: WeatherCondition) -> Void) {
             let url = "http://api.openweathermap.org/data/2.5/weather"
             let params = ["lat":lat, "lon":lon]
             
             Alamofire.request(.GET, url, parameters: params)
-                .responseJSON { (request, response, json, error) in
-                    println(response)
-                    if(error != nil || json == nil) {
-                        println("Error: \(error)")
-                    } else {
-                        let json = JSON(json!)
+                .responseJSON { request, response, result in
+                    switch result {
+                    case .Success(let json):
+                        let json = JSON(json)
                         block(weatherCondition: self.createWeatherConditionFronJson(json))
+                    case .Failure(_, let error):
+                        print("Error: \(error)")
                     }
             }
     }
@@ -35,18 +35,18 @@ class WeatherDatastore {
             let url = "http://api.openweathermap.org/data/2.5/forecast"
             let params = ["lat":lat, "lon":lon]
             Alamofire.request(.GET, url, parameters: params)
-                .responseJSON { (request, response, json, error) in
-                    if(error != nil || json == nil) {
-                        println("Error: \(error)")
-                    }
-                    else {
-                        let json = JSON(json!)
+                .responseJSON { request, response, result in
+                    switch result {
+                    case .Success(let json):
+                        let json = JSON(json)
                         let list: Array<JSON> = json["list"].arrayValue
                         
                         let weatherConditions: Array<WeatherCondition> = list.map() {
                             return self.createWeatherConditionFronJson($0)
                         }
                         block(weatherConditions: weatherConditions)
+                    case .Failure(_, let error):
+                        print("Error: \(error)")
                     }
             }
     }
@@ -58,11 +58,10 @@ class WeatherDatastore {
             let url = "http://api.openweathermap.org/data/2.5/forecast/daily"
             let params = ["lat":lat, "lon":lon, "cnt":Double(dayCnt+1)]
             Alamofire.request(.GET, url, parameters: params)
-                .responseJSON { (request, response, json, error) in
-                    if(error != nil || json == nil) {
-                        println("Error: \(error)")
-                    } else {
-                        var json = JSON(json!)
+                .responseJSON { request, response, result in
+                    switch result {
+                    case .Success(let json):
+                        let json = JSON(json)
                         let list: Array<JSON> = json["list"].arrayValue
                         let weatherConditions: Array<WeatherCondition> = list.map() {
                             return self.createDayForecastFronJson($0)
@@ -70,6 +69,8 @@ class WeatherDatastore {
                         let count = weatherConditions.count
                         let daysWithoutToday = Array(weatherConditions[1..<count])
                         block(weatherConditions: daysWithoutToday)
+                    case .Failure(_, let error):
+                        print("Error: \(error)")
                     }
             }
     }

@@ -37,7 +37,7 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
                 locationManager.stopUpdatingLocation()
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         locationManager.stopUpdatingLocation()
         NSLog("Error: \(error)")
         dispatch_async(dispatch_get_main_queue()){
@@ -45,10 +45,10 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]) {
-        var locationArray = locations as NSArray
-        var locationObj = locationArray.lastObject as! CLLocation
-        var coord = locationObj.coordinate
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
         
         dispatch_async(dispatch_get_main_queue()){
             self.onLocationFound(Location(lat: coord.latitude, lon: coord.longitude))
@@ -57,7 +57,7 @@ class LocationDatastore: NSObject, CLLocationManagerDelegate {
         stopUpdating()
     }
     
-    func locationManager(manager: CLLocationManager!,
+    func locationManager(manager: CLLocationManager,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
             switch status {
             case .Restricted:

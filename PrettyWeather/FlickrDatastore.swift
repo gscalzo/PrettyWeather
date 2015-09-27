@@ -43,8 +43,8 @@ class FlickrDatastore {
                         closure(image: image!)
                     }
             } else {
-                println(error)
-                println(response)
+                print(error)
+                print(response)
             }
     }
 }

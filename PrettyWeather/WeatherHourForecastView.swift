@@ -47,15 +47,15 @@ private extension WeatherHourForecastView{
 // MARK: Layout
 private extension WeatherHourForecastView{
     func layoutView() {
-        layout(iconLabel) { view in
+        constrain(iconLabel) { view in
             view.center == view.superview!.center
             view.height == 50
         }
-        layout(hourLabel) { view in
+        constrain(hourLabel) { view in
             view.centerX == view.superview!.centerX
             view.top == view.superview!.top
         }
-        layout(tempsLabel) { view in
+        constrain(tempsLabel) { view in
             view.centerX == view.superview!.centerX
             view.bottom == view.superview!.bottom
         }
@@ -77,10 +77,10 @@ private extension WeatherHourForecastView{
 // MARK: Render
 extension WeatherHourForecastView{
     func render(weatherCondition: WeatherCondition){
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         hourLabel.text = dateFormatter.stringFromDate(weatherCondition.time)
-        iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, 30)
+        iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, size: 30)
         
         var usesMetric = false
         if let localeSystem = NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
