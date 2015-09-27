@@ -50,32 +50,32 @@ private extension WeatherHourlyForecastView{
 // MARK: Layout
 private extension WeatherHourlyForecastView{
     func layoutView(){
-        layout(self) { view in
+        constrain(self) { view in
             view.height == 100
         }
-        layout(scrollView) { view in
+        constrain(scrollView) { view in
             view.top == view.superview!.top
             view.bottom == view.superview!.bottom
             view.left == view.superview!.left
             view.right == view.superview!.right
         }
         
-        layout(forecastCells.first!) { view in
+        constrain(forecastCells.first!) { view in
             view.left == view.superview!.left
         }
-        layout(forecastCells.last!) { view in
+        constrain(forecastCells.last!) { view in
             view.right == view.superview!.right
         }
         
         for idx in 1..<forecastCells.count {
             let previousCell = forecastCells[idx-1]
             let cell = forecastCells[idx]
-            layout(previousCell, cell) { view, view2 in
+            constrain(previousCell, cell) { view, view2 in
                 view.right == view2.left + 5
             }
         }
         for cell in forecastCells {
-            layout(cell) { view in
+            constrain(cell) { view in
                 view.width == view.height
                 view.height == view.superview!.height
                 view.top == view.superview!.top
